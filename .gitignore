@@ -1,0 +1,31 @@
+# --- Project EmpowerED Data Sources ---
+# Ignore raw datasets to avoid GitHub file size limits and repository bloat
+data/
+*.csv
+*.sav
+*.xlsx
+*.xls
+*.json
+*.parquet
+
+# --- Python & Virtual Environments ---
+__pycache__/
+.venv/
+venv/
+env/
+.env
+*.py[cod]
+*$py.class
+
+# --- Jupyter Notebooks & IDEs ---
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# --- EDA Outputs & Drafts ---
+# Ignore temporary logs and draft plots; keep final high-res deliverables
+plots/drafts/
+*.log
+temp/
