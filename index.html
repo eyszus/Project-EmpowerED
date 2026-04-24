@@ -19,14 +19,15 @@
 					<div class="nav-logo">
 						<img src="images/ProjectEmpowerEDLogo.png" alt="Project EmpowerED" />
 					</div>
-					<ul>
+					<ul class="nav-list">
 						<li><a href="#top">Home</a></li>
 						<li><a href="#problem">Problem</a></li>
-						<li><a href="#questions">Research Questions</a></li>
+						<li><a href="#questions">Research</a></li>
 						<li><a href="#hypotheses">Hypotheses</a></li>
 						<li><a href="#approach">Approach</a></li>
-						<li><a href="#data">Data Sources</a></li>
+						<li><a href="#data">Data</a></li>
 						<li><a href="#analysis">Analysis</a></li>
+						<li><a href="#findings">Findings</a></li>
 						<li><a href="#resources">Resources</a></li>
 						<li><a href="#team">Team</a></li>
 					</ul>
@@ -109,80 +110,116 @@
 				</div>
 			</article>
 
-		<!-- Analysis & Findings -->
+		<!-- Analysis & Visualizations -->
 			<article id="analysis" class="wrapper style1">
 				<div class="container">
 					<header>
-						<h2>Analysis & Findings</h2>
+						<h2>Exploratory Data Analysis</h2>
 					</header>
-					<p>Below are the key visualizations from our exploratory data analysis, organized by research question.</p>
+					<p style="font-size: 1.1rem; margin-bottom: 3rem;">Our analysis examines literacy patterns across the Philippines through three complementary research questions. Below are the key visualizations from our exploratory data analysis.</p>
 					
 					<!-- RQ1 Visualizations -->
-					<div style="margin-top: 2rem; margin-bottom: 2rem;">
-						<h3>Research Question 1: Regional Comparison</h3>
-						<p style="font-size: 0.9rem; color: #666;">How does the reading proficiency of Filipino students compare to other Southeast Asian students?</p>
-						<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
-							<figure style="text-align: center;">
+					<div style="margin: 3rem 0; padding: 2rem 0 2.5rem 0; border-bottom: 2px solid #eee;">
+						<h3 style="color: #333; margin: 0 0 0.75rem 0;">RQ1: Regional Comparison</h3>
+						<p style="font-size: 0.95rem; color: #666; margin: 0 0 1rem 0; font-weight: 500;">How does the reading proficiency of Filipino students compare to other Southeast Asian students?</p>
+						<p style="font-size: 0.9rem; color: #777; line-height: 1.7; margin-bottom: 2.5rem;">We compared reading proficiency scores of Filipino students against other Southeast Asian nations using PISA 2022 data. The visualizations reveal overall trends in regional literacy performance and highlight areas where the Philippines differs from neighboring countries in student achievement levels.</p>
+						<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
+							<figure style="text-align: center; margin: 0;">
 								<img src="images/rq1_0.svg" alt="RQ1 Visualization 1" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">Figure 1.1</figcaption>
+								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 1.1</figcaption>
 							</figure>
-							<figure style="text-align: center;">
+							<figure style="text-align: center; margin: 0;">
 								<img src="images/rq1_1.svg" alt="RQ1 Visualization 2" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">Figure 1.2</figcaption>
+								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 1.2</figcaption>
 							</figure>
-							<figure style="text-align: center;">
+							<figure style="text-align: center; margin: 0;">
 								<img src="images/rq1_2.svg" alt="RQ1 Visualization 3" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">Figure 1.3</figcaption>
+								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 1.3</figcaption>
 							</figure>
 						</div>
 					</div>
 
 					<!-- RQ2 Visualizations -->
-					<div style="margin-top: 2rem; margin-bottom: 2rem;">
-						<h3>Research Question 2: Socioeconomic Factors</h3>
-						<p style="font-size: 0.9rem; color: #666;">To what degree do household income and parental education correlate with reading scores?</p>
-						<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
-							<figure style="text-align: center;">
+					<div style="margin: 3rem 0; padding: 2rem 0 2.5rem 0; border-bottom: 2px solid #eee;">
+						<h3 style="color: #333; margin: 0 0 0.75rem 0;">RQ2: Socioeconomic Factors</h3>
+						<p style="font-size: 0.95rem; color: #666; margin: 0 0 1rem 0; font-weight: 500;">To what degree do household income and parental education correlate with reading scores?</p>
+						<p style="font-size: 0.9rem; color: #777; line-height: 1.7; margin-bottom: 2.5rem;">Socioeconomic status—measured by household income and parental education—significantly influences student literacy outcomes. Our analysis explores the relationship between these factors and reading proficiency, revealing how economic disparities translate into educational achievement gaps. Multiple visualizations examine correlation patterns and distribution differences across income and education levels.</p>
+						<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
+							<figure style="text-align: center; margin: 0;">
 								<img src="images/rq2_0.svg" alt="RQ2 Visualization 1" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">Figure 2.1</figcaption>
+								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 2.1</figcaption>
 							</figure>
-							<figure style="text-align: center;">
+							<figure style="text-align: center; margin: 0;">
 								<img src="images/rq2_1.svg" alt="RQ2 Visualization 2" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">Figure 2.2</figcaption>
+								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 2.2</figcaption>
 							</figure>
-							<figure style="text-align: center;">
+							<figure style="text-align: center; margin: 0;">
 								<img src="images/rq2_2.svg" alt="RQ2 Visualization 3" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">Figure 2.3</figcaption>
+								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 2.3</figcaption>
 							</figure>
-							<figure style="text-align: center;">
+							<figure style="text-align: center; margin: 0;">
 								<img src="images/rq2_3.svg" alt="RQ2 Visualization 4" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">Figure 2.4</figcaption>
+								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 2.4</figcaption>
 							</figure>
-							<figure style="text-align: center;">
+							<figure style="text-align: center; margin: 0;">
 								<img src="images/rq2_4.svg" alt="RQ2 Visualization 5" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">Figure 2.5</figcaption>
+								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 2.5</figcaption>
 							</figure>
 						</div>
 					</div>
 
 					<!-- RQ3 Visualizations -->
-					<div style="margin-top: 2rem; margin-bottom: 2rem;">
-						<h3>Research Question 3: Urban vs. Rural Differences</h3>
-						<p style="font-size: 0.9rem; color: #666;">Is there a statistically significant difference in literacy outcomes between urban and rural schools?</p>
-						<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
-							<figure style="text-align: center;">
+					<div style="margin: 3rem 0 0 0; padding: 2rem 0 0 0;">
+						<h3 style="color: #333; margin: 0 0 0.75rem 0;">RQ3: Urban vs. Rural Differences</h3>
+						<p style="font-size: 0.95rem; color: #666; margin: 0 0 1rem 0; font-weight: 500;">Is there a statistically significant difference in literacy outcomes between urban and rural schools?</p>
+						<p style="font-size: 0.9rem; color: #777; line-height: 1.7; margin-bottom: 2.5rem;">Geographic location fundamentally shapes educational access and outcomes. This analysis compares reading proficiency between urban and rural public elementary schools in the Philippines. The visualizations demonstrate disparities in literacy performance and highlight the structural challenges facing rural education systems.</p>
+						<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
+							<figure style="text-align: center; margin: 0;">
 								<img src="images/rq3_0.png" alt="RQ3 Visualization 1" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">Figure 3.1</figcaption>
+								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 3.1</figcaption>
 							</figure>
-							<figure style="text-align: center;">
+							<figure style="text-align: center; margin: 0;">
 								<img src="images/rq3_1.svg" alt="RQ3 Visualization 2" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">Figure 3.2</figcaption>
+								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 3.2</figcaption>
 							</figure>
-							<figure style="text-align: center;">
+							<figure style="text-align: center; margin: 0;">
 								<img src="images/rq3_2.svg" alt="RQ3 Visualization 3" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">Figure 3.3</figcaption>
+								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 3.3</figcaption>
 							</figure>
 						</div>
+					</div>
+				</div>
+			</article>
+
+		<!-- Hypothesis Testing Results -->
+			<article id="findings" class="wrapper style2">
+				<div class="container">
+					<header>
+						<h2>Hypothesis Testing Results</h2>
+					</header>
+					<p style="font-size: 0.95rem; color: #666; margin: 0.5rem 0 2.5rem 0;">We conducted statistical tests to evaluate our primary hypotheses. The results provide evidence about literacy disparities in the Philippines:</p>
+					
+					<div style="background: #f9f9f9; border-left: 4px solid #0066cc; padding: 2rem; border-radius: 4px; margin-bottom: 3rem;">
+						<h4 style="color: #333; margin: 0 0 1rem 0;">Hypothesis 3: Urban-Rural Disparity</h4>
+						<p style="font-size: 0.9rem; color: #666; margin: 0 0 0.75rem 0;"><strong>Hypothesis:</strong> Students from rural public schools show significantly lower literacy outcomes.</p>
+						<div style="font-size: 0.9rem; color: #222; line-height: 1.7;">
+							<p><strong>Hypothesis Testing: Pearson Correlation Analysis</strong></p>
+							<p>A Pearson correlation analysis was conducted to determine whether a statistically significant relationship exists between urbanity level and literacy rate across regions (Hypothesis 3). The results produced a correlation coefficient of r = 0.504, indicating a moderate positive relationship between the two variables. This suggests that regions with higher levels of urbanization tend to have higher literacy rates.</p>
+							<p>The p-value obtained from the test was p = 0.0328, which is less than the commonly accepted significance level of α = 0.05. Therefore, the null hypothesis stating that there is no significant relationship between urbanity level and literacy rate is rejected. This indicates that the observed relationship is statistically significant and unlikely to have occurred by random chance.</p>
+							<p>Further analysis using linear regression produced a slope of 0.0712 and an intercept of 85.7517. The positive slope indicates that for every one percentage point increase in urbanity level, the literacy rate is expected to increase by approximately 0.071 percentage points. This supports the earlier observation from the scatterplot that the relationship between the variables is positive.</p>
+							<p>The coefficient of determination, R² = 0.254, indicates that approximately 25.44% of the variation in literacy rate can be explained by differences in urbanity level. While this demonstrates that urbanity contributes to literacy outcomes, it also suggests that other factors, such as education access, socioeconomic conditions, infrastructure, and government programs, likely play a substantial role in influencing literacy rates.</p>
+							<p>Overall, the statistical analysis confirms that there is a statistically significant, moderate positive relationship between urbanity level and literacy rate among regions. However, the relatively modest R² value indicates that urbanity level alone does not fully explain variations in literacy, and additional variables would be needed for a more comprehensive model.</p>
+						</div>
+					</div>
+					
+					<div style="margin-top: 0; padding: 2rem; background: #f0f7ff; border-radius: 6px; border-left: 4px solid #0066cc;">
+						<h4 style="color: #333; margin: 0 0 1.25rem 0;">Key Takeaways</h4>
+						<ul style="color: #222; line-height: 1.8; margin: 0; padding-left: 1.5rem;">
+							<li style="margin-bottom: 0.75rem;">Filipino students consistently underperform compared to regional benchmarks</li>
+							<li style="margin-bottom: 0.75rem;">Socioeconomic status is a strong predictor of reading achievement</li>
+							<li style="margin-bottom: 0.75rem;">Geographic location creates significant educational inequities</li>
+							<li>Structural barriers in rural areas compound literacy challenges</li>
+						</ul>
 					</div>
 				</div>
 			</article>
