@@ -32,7 +32,7 @@
 		});
 
 	// Mobile nav toggle.
-		var $navToggle = $nav.find('.nav-toggle'),
+		var $navToggle = $('.nav-toggle'),
 			$navMenu = $('#nav-menu');
 
 		$navToggle.on('click', function() {
