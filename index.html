@@ -9,26 +9,29 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
 		<link rel="stylesheet" href="assets/css/portfolio.css" />
 	</head>
 	<body class="is-preload portfolio">
 
 		<header id="nav" class="site-header" aria-label="Main navigation">
 			<div class="header-inner">
-				<a href="#top" class="nav-logo">
-					<img src="images/ProjectEmpowerEDLogo.png" alt="Project EmpowerED" />
-				</a>
-				<nav class="header-nav" aria-label="Section links">
-					<ul class="nav-list" id="nav-menu">
-						<li><a href="#top">Home</a></li>
-						<li><a href="#background">Background</a></li>
-						<li><a href="#data">Data</a></li>
-						<li><a href="#results">Results</a></li>
-						<li><a href="#conclusion">Conclusion</a></li>
-						<li><a href="#ml-model">ML Model</a></li>
-						<li><a href="#team">Team</a></li>
-					</ul>
-				</nav>
+				<div class="header-brand-group">
+					<a href="#top" class="nav-logo">
+						<img src="images/ProjectEmpowerEDLogo.png" alt="Project EmpowerED" />
+					</a>
+					<nav class="header-nav" aria-label="Section links">
+						<ul class="nav-list" id="nav-menu">
+							<li><a href="#top">Home</a></li>
+							<li><a href="#background">Background</a></li>
+							<li><a href="#data">Data</a></li>
+							<li><a href="#results">Results</a></li>
+							<li><a href="#conclusion">Conclusion</a></li>
+							<li><a href="#ml-model">ML Model</a></li>
+							<li><a href="#team">Team</a></li>
+						</ul>
+					</nav>
+				</div>
 				<button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
 					<span class="nav-toggle-bar"></span>
 					<span class="nav-toggle-bar"></span>
@@ -40,27 +43,20 @@
 		<main>
 			<!-- Home -->
 			<section id="top" class="section-block section-hero">
-				<div class="container split-hero">
+				<div class="container hero-stack">
 					<div class="hero-text">
-						<p class="project-label">Project EmpowerED</p>
-						<h1>Every reading gap today can become an opportunity gap tomorrow</h1>
+						<p class="project-label"><span class="brand-name">Project <span class="brand-ed">EmpowerED</span></span></p>
+						<h1>Every <span class="text-highlight text-highlight--secondary">reading gap</span> today can become an <span class="text-highlight text-highlight--accent">opportunity gap</span> tomorrow</h1>
 						<p>Reading proficiency outcomes among Filipino students are analyzed by this project, and how socioeconomic and geographic factors contribute to differences in literacy performance across public schools is investigated.</p>
 					</div>
-					<div class="hero-aside">
-						<div class="hero-dots" aria-hidden="true">
-							<span class="dot dot-primary"></span>
-							<span class="dot dot-secondary"></span>
-							<span class="dot dot-accent"></span>
-						</div>
-						<div class="hero-visual" aria-label="Hero illustration area">
-							<img src="images/Hero_Section.jpg" alt="Illustration for literacy in the Philippines" />
-						</div>
+					<div class="hero-visual" aria-label="Hero illustration area">
+						<img src="images/hero_section.svg" alt="Project EmpowerED hero illustration" class="hero-visual-img" />
 					</div>
 				</div>
 
 				<div class="container overview-block">
 					<p class="overview-label">Overview</p>
-					<h2 class="overview-statement">Project EmpowerED investigates literacy outcomes in the Philippines using data-driven analysis, focusing on socioeconomic status, parental education, and geographic location as drivers of educational inequality.</h2>
+					<h2 class="overview-statement"><span class="brand-name">Project <span class="brand-ed">EmpowerED</span></span> investigates literacy outcomes in the Philippines using data-driven analysis, focusing on socioeconomic status, parental education, and geographic location as drivers of educational inequality.</h2>
 					<div class="split-problem-solution">
 						<div>
 							<h3>Problem</h3>
@@ -294,37 +290,89 @@
 			<footer id="team" class="site-footer">
 				<div class="container">
 					<h2>Team</h2>
+					<p class="team-intro">Meet the team behind <span class="brand-name">Project <span class="brand-ed">EmpowerED</span></span></p>
 					<ul class="team-list">
 						<li class="team-member">
+							<div class="member-photo">
+								<!-- Replace placeholder: save headshot as images/team/ace-zeus-rimo.jpg (400×400 px recommended) -->
+								<div class="member-photo-placeholder" role="img" aria-label="Photo placeholder for Ace Zeus Rimo">
+									<span class="placeholder-label">Your photo</span>
+									<span class="placeholder-size">400 × 400 px</span>
+								</div>
+							</div>
 							<div class="member-info">
 								<h4>Ace Zeus Rimo</h4>
 								<p>Hi, I'm Ace. I am a 3rd-year Computer Science student at the University of the Philippines, Diliman. I entered this program with the aspiration of becoming a software engineer.</p>
 								<p>I usually solve problems through programming in my free time, but aside from that, I also enjoy running as a hobby.</p>
 								<ul class="member-contacts">
-									<li><a href="mailto:adrimo@up.edu.ph">adrimo@up.edu.ph</a></li>
-									<li><a href="https://www.instagram.com/eyszus/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+									<li>
+										<a href="mailto:adrimo@up.edu.ph">
+											<i class="fas fa-envelope" aria-hidden="true"></i>
+											<span>adrimo@up.edu.ph</span>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.instagram.com/eyszus/" target="_blank" rel="noopener noreferrer">
+											<i class="fab fa-instagram" aria-hidden="true"></i>
+											<span>@eyszus</span>
+										</a>
+									</li>
 								</ul>
 							</div>
 						</li>
 						<li class="team-member">
+							<div class="member-photo">
+								<!-- Replace placeholder: save headshot as images/team/josh-rylie-patino.jpg (400×400 px recommended) -->
+								<div class="member-photo-placeholder" role="img" aria-label="Photo placeholder for Josh Rylie Patiño">
+									<span class="placeholder-label">Your photo</span>
+									<span class="placeholder-size">400 × 400 px</span>
+								</div>
+							</div>
 							<div class="member-info">
 								<h4>Josh Rylie Patiño</h4>
 								<p>Hello, I'm Josh and I'm a 3rd year Computer Science student at the University of the Philippines - Diliman. In my free time, I like to go on Codeforces and Atcoder and solve problems there.</p>
 								<p>As cliché as it sounds, I believe that anyone can achieve anything, as long as they give it their all.</p>
 								<ul class="member-contacts">
-									<li><a href="mailto:jfpatino1@up.edu.ph">jfpatino1@up.edu.ph</a></li>
-									<li><a href="https://www.instagram.com/jshrylie/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+									<li>
+										<a href="mailto:jfpatino1@up.edu.ph">
+											<i class="fas fa-envelope" aria-hidden="true"></i>
+											<span>jfpatino1@up.edu.ph</span>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.instagram.com/jshrylie/" target="_blank" rel="noopener noreferrer">
+											<i class="fab fa-instagram" aria-hidden="true"></i>
+											<span>@jshrylie</span>
+										</a>
+									</li>
 								</ul>
 							</div>
 						</li>
 						<li class="team-member">
+							<div class="member-photo">
+								<!-- Replace placeholder: save headshot as images/team/renson-villareal.jpg (400×400 px recommended) -->
+								<div class="member-photo-placeholder" role="img" aria-label="Photo placeholder for Renson Nicolai Villareal">
+									<span class="placeholder-label">Your photo</span>
+									<span class="placeholder-size">400 × 400 px</span>
+								</div>
+							</div>
 							<div class="member-info">
 								<h4>Renson Nicolai Villareal</h4>
 								<p>Hi! I'm Renz and I'm a 3rd year Computer Science student at the University of the Philippines, Diliman. My academic interests center on data analysis and building practical solutions using computational thinking.</p>
 								<p>In my free time, I try to balance technical growth with reflection and involvement in my church community, which helps ground my perspective and values as I continue developing both personally and professionally.</p>
 								<ul class="member-contacts">
-									<li><a href="mailto:rdvillareal2@up.edu.ph">rdvillareal2@up.edu.ph</a></li>
-									<li><a href="https://www.instagram.com/ren_zyyyy/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+									<li>
+										<a href="mailto:rdvillareal2@up.edu.ph">
+											<i class="fas fa-envelope" aria-hidden="true"></i>
+											<span>rdvillareal2@up.edu.ph</span>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.instagram.com/ren_zyyyy/" target="_blank" rel="noopener noreferrer">
+											<i class="fab fa-instagram" aria-hidden="true"></i>
+											<span>@ren_zyyyy</span>
+										</a>
+									</li>
 								</ul>
 							</div>
 						</li>
