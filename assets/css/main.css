@@ -2059,10 +2059,20 @@ input, select, textarea {
 			max-width: 1200px;
 		}
 
+		/* PEDLogo scaling for navbar */
+		/* PEDLogo scaling for navbar - larger */
+		/* PEDLogo scaling for navbar - extremely large for testing */
 		#nav .nav-logo img {
-			height: 2.2em;
+			height: 10em;
 			width: auto;
 			display: block;
+			max-width: 100vw;
+			object-fit: contain;
+			padding: 0.1em 2em 0.1em 0;
+			border: 2px solid red; /* Visual debug aid */
+		}
+		}
+		}
 		}
 
 		#nav ul {
