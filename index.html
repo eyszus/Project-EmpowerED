@@ -49,9 +49,7 @@
 						<h1>Every <span class="text-highlight text-highlight--secondary">reading gap</span> today can become an <span class="text-highlight text-highlight--accent">opportunity gap</span> tomorrow</h1>
 						<p>Reading proficiency outcomes among Filipino students are analyzed by this project, and how socioeconomic and geographic factors contribute to differences in literacy performance across public schools is investigated.</p>
 					</div>
-					<div class="hero-visual" aria-label="Hero illustration area">
-						<img src="images/hero_section.svg" alt="Project EmpowerED hero illustration" class="hero-visual-img" />
-					</div>
+					<img src="images/hero_section.svg" alt="Project EmpowerED hero illustration" class="hero-visual-img" />
 				</div>
 
 				<div class="container overview-block">
@@ -81,6 +79,9 @@
 					<div class="article-row">
 						<article class="media-card">
 							<a href="https://www.rappler.com/philippines/filipino-students-literacy-crisis-edcom-2-report-january-2026/" target="_blank" rel="noopener noreferrer">
+								<div class="media-card-image">
+									<img src="images/articles/rappler-literacy-crisis.jpg" alt="Students in a Philippine classroom" loading="lazy" />
+								</div>
 								<div class="media-card-body">
 									<h4>Filipino students literacy crisis — EdCom 2 report</h4>
 									<p>National review highlights deepening reading gaps and urgent calls to address the literacy crisis among Filipino learners.</p>
@@ -89,6 +90,9 @@
 						</article>
 						<article class="media-card">
 							<a href="https://www.philstar.com/headlines/2025/12/17/2494945/new-study-7-10-students-philippines-lack-basic-reading-skills" target="_blank" rel="noopener noreferrer">
+								<div class="media-card-image">
+									<img src="images/articles/philstar-reading-skills.jpg" alt="Philippine students in school" loading="lazy" />
+								</div>
 								<div class="media-card-body">
 									<h4>New study: 7 in 10 students in Philippines lack basic reading skills</h4>
 									<p>Research underscores how widespread foundational reading deficits remain across the Philippine education system.</p>
@@ -140,7 +144,12 @@
 					</div>
 
 					<p class="cta-center">
-						<a href="https://drive.google.com/drive/folders/1YUsxrRSq7mFXAlM4QAR1T-unH6TEBggA?usp=sharing" class="btn-cta" target="_blank" rel="noopener noreferrer">View Dataset Repository</a>
+						<a href="https://drive.google.com/drive/folders/1YUsxrRSq7mFXAlM4QAR1T-unH6TEBggA?usp=sharing" class="btn-cta btn-external" target="_blank" rel="noopener noreferrer">
+							View Dataset Repository
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="btn-external-icon" aria-hidden="true">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+							</svg>
+						</a>
 					</p>
 				</div>
 			</section>
@@ -151,83 +160,95 @@
 					<h2 class="section-title-center">Results</h2>
 					<p class="section-desc-center">Here is what has been found from the analyzed datasets.</p>
 
-					<div class="nutshell-block">
+					<div class="nutshell-block nutshell-block--featured">
 						<h3>Literacy in a Nutshell</h3>
-						<figure>
-							<button type="button" class="gallery-trigger" data-caption="PISA ESCS overlapped regression plot" data-src="images/pisa_escs_overlapped_regression_plot.svg">
+						<figure class="nutshell-figure">
+							<button type="button" class="gallery-trigger gallery-trigger--large" data-caption="PISA ESCS overlapped regression plot" data-src="images/pisa_escs_overlapped_regression_plot.svg">
 								<img src="images/pisa_escs_overlapped_regression_plot.svg" alt="Overlapped regression plot of PISA reading scores and socioeconomic status" />
 							</button>
 							<figcaption>Socioeconomic status and reading performance (PISA 2022).</figcaption>
 						</figure>
 					</div>
 
-					<div class="rq-block">
-						<h3>RQ1: Regional Comparison</h3>
-						<p class="rq-intro">How does the reading proficiency of Filipino students compare to that of other Southeast Asian students in the PISA dataset?</p>
-						<p>We compared reading proficiency scores of Filipino students against other Southeast Asian nations using PISA 2022 data. The visualizations reveal overall trends in regional literacy performance and highlight areas where the Philippines differs from neighboring countries in student achievement levels.</p>
-						<div class="gallery-grid">
-							<figure>
-								<button type="button" class="gallery-trigger" data-caption="RQ1 — Figure 1.1" data-src="images/rq1_0.svg"><img src="images/rq1_0.svg" alt="RQ1 visualization 1" loading="lazy" /></button>
+					<article class="viz-panel">
+						<header class="viz-panel-header">
+							<span class="viz-panel-badge">RQ1</span>
+							<div>
+								<h3>Regional Comparison</h3>
+								<p class="viz-panel-summary">PISA 2022 comparisons show how Filipino reading scores align with other Southeast Asian countries and where the Philippines falls relative to regional benchmarks.</p>
+							</div>
+						</header>
+						<div class="viz-panel-grid viz-panel-grid--3">
+							<figure class="viz-item">
+								<button type="button" class="gallery-trigger" data-caption="RQ1 — Figure 1.1" data-src="images/rq1_0.svg"><img src="images/rq1_0.svg" alt="RQ1 Figure 1.1" loading="lazy" /></button>
 								<figcaption>Figure 1.1</figcaption>
 							</figure>
-							<figure>
-								<button type="button" class="gallery-trigger" data-caption="RQ1 — Figure 1.2" data-src="images/rq1_1.svg"><img src="images/rq1_1.svg" alt="RQ1 visualization 2" loading="lazy" /></button>
+							<figure class="viz-item">
+								<button type="button" class="gallery-trigger" data-caption="RQ1 — Figure 1.2" data-src="images/rq1_1.svg"><img src="images/rq1_1.svg" alt="RQ1 Figure 1.2" loading="lazy" /></button>
 								<figcaption>Figure 1.2</figcaption>
 							</figure>
-							<figure>
-								<button type="button" class="gallery-trigger" data-caption="RQ1 — Figure 1.3" data-src="images/rq1_2.svg"><img src="images/rq1_2.svg" alt="RQ1 visualization 3" loading="lazy" /></button>
+							<figure class="viz-item">
+								<button type="button" class="gallery-trigger" data-caption="RQ1 — Figure 1.3" data-src="images/rq1_2.svg"><img src="images/rq1_2.svg" alt="RQ1 Figure 1.3" loading="lazy" /></button>
 								<figcaption>Figure 1.3</figcaption>
 							</figure>
 						</div>
-					</div>
+					</article>
 
-					<div class="rq-block">
-						<h3>RQ2: Socioeconomic Factors</h3>
-						<p class="rq-intro">To what degree do household income and parental education correlate with standardized reading comprehension scores in the Philippines?</p>
-						<p>Socioeconomic status—measured by household income and parental education—significantly influences student literacy outcomes. Our analysis explores the relationship between these factors and reading proficiency, revealing how economic disparities translate into educational achievement gaps.</p>
-						<div class="gallery-grid">
-							<figure>
-								<button type="button" class="gallery-trigger" data-caption="RQ2 — Figure 2.1" data-src="images/rq2_0.svg"><img src="images/rq2_0.svg" alt="RQ2 visualization 1" loading="lazy" /></button>
+					<article class="viz-panel">
+						<header class="viz-panel-header">
+							<span class="viz-panel-badge">RQ2</span>
+							<div>
+								<h3>Socioeconomic Factors</h3>
+								<p class="viz-panel-summary">Household income and parental education correlate with reading scores—highlighting how economic disadvantage maps onto literacy achievement gaps.</p>
+							</div>
+						</header>
+						<div class="viz-panel-grid viz-panel-grid--scroll">
+							<figure class="viz-item">
+								<button type="button" class="gallery-trigger" data-caption="RQ2 — Figure 2.1" data-src="images/rq2_0.svg"><img src="images/rq2_0.svg" alt="RQ2 Figure 2.1" loading="lazy" /></button>
 								<figcaption>Figure 2.1</figcaption>
 							</figure>
-							<figure>
-								<button type="button" class="gallery-trigger" data-caption="RQ2 — Figure 2.2" data-src="images/rq2_1.svg"><img src="images/rq2_1.svg" alt="RQ2 visualization 2" loading="lazy" /></button>
+							<figure class="viz-item">
+								<button type="button" class="gallery-trigger" data-caption="RQ2 — Figure 2.2" data-src="images/rq2_1.svg"><img src="images/rq2_1.svg" alt="RQ2 Figure 2.2" loading="lazy" /></button>
 								<figcaption>Figure 2.2</figcaption>
 							</figure>
-							<figure>
-								<button type="button" class="gallery-trigger" data-caption="RQ2 — Figure 2.3" data-src="images/rq2_2.svg"><img src="images/rq2_2.svg" alt="RQ2 visualization 3" loading="lazy" /></button>
+							<figure class="viz-item">
+								<button type="button" class="gallery-trigger" data-caption="RQ2 — Figure 2.3" data-src="images/rq2_2.svg"><img src="images/rq2_2.svg" alt="RQ2 Figure 2.3" loading="lazy" /></button>
 								<figcaption>Figure 2.3</figcaption>
 							</figure>
-							<figure>
-								<button type="button" class="gallery-trigger" data-caption="RQ2 — Figure 2.4" data-src="images/rq2_3.svg"><img src="images/rq2_3.svg" alt="RQ2 visualization 4" loading="lazy" /></button>
+							<figure class="viz-item">
+								<button type="button" class="gallery-trigger" data-caption="RQ2 — Figure 2.4" data-src="images/rq2_3.svg"><img src="images/rq2_3.svg" alt="RQ2 Figure 2.4" loading="lazy" /></button>
 								<figcaption>Figure 2.4</figcaption>
 							</figure>
-							<figure>
-								<button type="button" class="gallery-trigger" data-caption="RQ2 — Figure 2.5" data-src="images/rq2_4.svg"><img src="images/rq2_4.svg" alt="RQ2 visualization 5" loading="lazy" /></button>
+							<figure class="viz-item">
+								<button type="button" class="gallery-trigger" data-caption="RQ2 — Figure 2.5" data-src="images/rq2_4.svg"><img src="images/rq2_4.svg" alt="RQ2 Figure 2.5" loading="lazy" /></button>
 								<figcaption>Figure 2.5</figcaption>
 							</figure>
 						</div>
-					</div>
+					</article>
 
-					<div class="rq-block">
-						<h3>RQ3: Urban vs Rural Differences</h3>
-						<p class="rq-intro">Is there a statistically significant difference in literacy outcomes between students from urban and rural public elementary schools?</p>
-						<p>Geographic location fundamentally shapes educational access and outcomes. This analysis compares reading proficiency between urban and rural public elementary schools in the Philippines.</p>
-						<div class="gallery-grid">
-							<figure>
-								<button type="button" class="gallery-trigger" data-caption="RQ3 — Figure 3.1" data-src="images/rq3_0.png"><img src="images/rq3_0.png" alt="RQ3 visualization 1" loading="lazy" /></button>
+					<article class="viz-panel">
+						<header class="viz-panel-header">
+							<span class="viz-panel-badge">RQ3</span>
+							<div>
+								<h3>Urban vs Rural Differences</h3>
+								<p class="viz-panel-summary">Urban and rural public schools show measurable differences in literacy outcomes, reflecting uneven access to resources and support.</p>
+							</div>
+						</header>
+						<div class="viz-panel-grid viz-panel-grid--3">
+							<figure class="viz-item">
+								<button type="button" class="gallery-trigger" data-caption="RQ3 — Figure 3.1" data-src="images/rq3_0.png"><img src="images/rq3_0.png" alt="RQ3 Figure 3.1" loading="lazy" /></button>
 								<figcaption>Figure 3.1</figcaption>
 							</figure>
-							<figure>
-								<button type="button" class="gallery-trigger" data-caption="RQ3 — Figure 3.2" data-src="images/rq3_1.svg"><img src="images/rq3_1.svg" alt="RQ3 visualization 2" loading="lazy" /></button>
+							<figure class="viz-item">
+								<button type="button" class="gallery-trigger" data-caption="RQ3 — Figure 3.2" data-src="images/rq3_1.svg"><img src="images/rq3_1.svg" alt="RQ3 Figure 3.2" loading="lazy" /></button>
 								<figcaption>Figure 3.2</figcaption>
 							</figure>
-							<figure>
-								<button type="button" class="gallery-trigger" data-caption="RQ3 — Figure 3.3" data-src="images/rq3_2.svg"><img src="images/rq3_2.svg" alt="RQ3 visualization 3" loading="lazy" /></button>
+							<figure class="viz-item">
+								<button type="button" class="gallery-trigger" data-caption="RQ3 — Figure 3.3" data-src="images/rq3_2.svg"><img src="images/rq3_2.svg" alt="RQ3 Figure 3.3" loading="lazy" /></button>
 								<figcaption>Figure 3.3</figcaption>
 							</figure>
 						</div>
-					</div>
+					</article>
 				</div>
 			</section>
 
