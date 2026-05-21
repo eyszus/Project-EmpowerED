@@ -1,273 +1,351 @@
 <!DOCTYPE HTML>
-<!--
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="en">
 	<head>
 		<title>Project EmpowerED</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Project EmpowerED analyzes literacy outcomes among Filipino students using PISA, SEA-PLM, and FLEMMS data." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/portfolio.css" />
 	</head>
-	<body class="is-preload">
+	<body class="is-preload portfolio">
 
-		<!-- Nav -->
-			<nav id="nav">
-				<div class="container nav-inner">
-					<div class="nav-logo">
-						<img src="images/ProjectEmpowerEDLogo.png" alt="Project EmpowerED" />
-					</div>
-					<ul class="nav-list">
+		<header id="nav" class="site-header" aria-label="Main navigation">
+			<div class="container header-inner">
+				<a href="#top" class="nav-logo">
+					<img src="images/ProjectEmpowerEDLogo.png" alt="Project EmpowerED" />
+				</a>
+				<nav class="header-nav">
+					<button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+						<span class="nav-toggle-bar"></span>
+						<span class="nav-toggle-bar"></span>
+						<span class="nav-toggle-bar"></span>
+					</button>
+					<ul class="nav-list" id="nav-menu">
 						<li><a href="#top">Home</a></li>
-						<li><a href="#problem">Problem</a></li>
-						<li><a href="#questions">Research</a></li>
-						<li><a href="#hypotheses">Hypotheses</a></li>
-						<li><a href="#approach">Approach</a></li>
+						<li><a href="#background">Background</a></li>
 						<li><a href="#data">Data</a></li>
-						<li><a href="#analysis">Analysis</a></li>
-						<li><a href="#findings">Findings</a></li>
-						<li><a href="#resources">Resources</a></li>
+						<li><a href="#results">Results</a></li>
+						<li><a href="#conclusion">Conclusion</a></li>
+						<li><a href="#ml-model">ML Model</a></li>
 						<li><a href="#team">Team</a></li>
 					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<!-- Home -->
+			<section id="top" class="section-block section-hero">
+				<div class="container split-hero">
+					<div class="hero-text">
+						<p class="project-label">Project EmpowerED</p>
+						<h1>Every reading gap today can become an opportunity gap tomorrow</h1>
+						<p>Reading proficiency outcomes among Filipino students are analyzed by this project, and how socioeconomic and geographic factors contribute to differences in literacy performance across public schools is investigated.</p>
+					</div>
+					<div class="hero-aside">
+						<div class="hero-dots" aria-hidden="true">
+							<span class="dot dot-red"></span>
+							<span class="dot dot-green"></span>
+							<span class="dot dot-blue"></span>
+						</div>
+						<div class="hero-visual" aria-label="Hero illustration area">
+							<img src="images/Hero_Section.jpg" alt="Illustration for literacy in the Philippines" />
+						</div>
+					</div>
 				</div>
-			</nav>
 
-		<!-- Home -->
-			<article id="top" class="wrapper style1">
-				<div class="container">
-					<header>
-						<h1><strong>Project EmpowerED</strong></h1>
-						<p class="tagline">A data-driven look at literacy outcomes across the Philippines.</p>
-					</header>
-					<p>This project investigates the state of reading proficiency among Filipino students and the factors that may influence literacy outcomes in public schools. Literacy is a key foundation for quality education and long-term national development, yet international assessments have consistently shown that Filipino students struggle in reading comprehension compared to many other countries.</p>
-					<p>Through a data-driven analysis, our project examines how socioeconomic status and geographic location relate to reading proficiency outcomes. By analyzing datasets from international and national education studies, we aim to identify patterns that can help explain disparities in literacy performance across the Philippines.</p>
-				<div class="photo-credit">Photo: <a href="https://www.philstar.com/headlines/2024/01/11/2325063/explainer-students-poor-literacy-are-all-teachers-now-reading-teachers" target="_blank" rel="noreferrer noopener">Philstar</a></div>
-			</article>
-
-		<!-- Problem -->
-			<article id="problem" class="wrapper style2">
-				<div class="container">
-					<header>
-						<h2>The Problem</h2>
-					</header>
-					<p>Recent international education assessments, particularly the Programme for International Student Assessment (PISA), have placed the Philippines among the lowest performing countries in reading comprehension. This raises important questions about the underlying factors that shape literacy outcomes among Filipino students.</p>
-					<p>Educational inequality may stem from differences in socioeconomic status, parental education, and geographic location. Students from low-income households or rural communities may face limited access to learning resources, fewer educational opportunities, and structural disadvantages that affect literacy development.</p>
+				<div class="container overview-block">
+					<p class="overview-label">Overview</p>
+					<h2 class="overview-statement">Project EmpowerED investigates literacy outcomes in the Philippines using data-driven analysis, focusing on socioeconomic status, parental education, and geographic location as drivers of educational inequality.</h2>
+					<div class="split-problem-solution">
+						<div>
+							<h3>Problem</h3>
+							<p>The Philippines continues to experience severe literacy challenges, reflected in poor reading performance and significant educational disparities affecting low-income and rural students.</p>
+						</div>
+						<div>
+							<h3>Solution</h3>
+							<p>Use statistical and data-driven methods to identify patterns behind literacy inequality and provide evidence-based insights.</p>
+						</div>
+					</div>
 				</div>
-			</article>
+			</section>
 
-		<!-- Research Questions -->
-			<article id="questions" class="wrapper style3">
+			<!-- Background -->
+			<section id="background" class="section-block section-alt">
 				<div class="container">
-					<header>
-						<h2>Research Questions</h2>
-					</header>
-					<ul>
-						<li>How does the reading proficiency of Filipino students compare to that of other Southeast Asian students in the PISA dataset?</li>
-						<li>To what degree do household income and parental education correlate with standardized reading comprehension scores in the Philippines?</li>
-						<li>Is there a statistically significant difference in literacy outcomes between students from urban and rural public elementary schools?</li>
-					</ul>
+					<h2 class="section-title-center">Background</h2>
+					<p class="section-desc-center">Literacy gaps affect future opportunities. Educational inequality is tied to structural barriers, and socioeconomic and geographic factors play major roles in who succeeds in reading and who is left behind.</p>
+
+					<p class="narrative-center">Recent international education assessments have placed the Philippines among the lowest performing countries in reading comprehension. Students from low-income households or rural communities may face limited access to learning resources, fewer educational opportunities, and structural disadvantages that affect literacy development.</p>
+
+					<div class="article-row">
+						<article class="media-card media-card-red">
+							<a href="https://www.rappler.com/philippines/filipino-students-literacy-crisis-edcom-2-report-january-2026/" target="_blank" rel="noopener noreferrer">
+								<div class="media-card-body">
+									<h4>Filipino students literacy crisis — EdCom 2 report</h4>
+									<p>National review highlights deepening reading gaps and urgent calls to address the literacy crisis among Filipino learners.</p>
+								</div>
+							</a>
+						</article>
+						<article class="media-card media-card-green">
+							<a href="https://www.philstar.com/headlines/2025/12/17/2494945/new-study-7-10-students-philippines-lack-basic-reading-skills" target="_blank" rel="noopener noreferrer">
+								<div class="media-card-body">
+									<h4>New study: 7 in 10 students in Philippines lack basic reading skills</h4>
+									<p>Research underscores how widespread foundational reading deficits remain across the Philippine education system.</p>
+								</div>
+							</a>
+						</article>
+					</div>
+
+					<div class="hypothesis-row">
+						<div class="hypothesis-box">
+							<h3>Research Questions</h3>
+							<ul>
+								<li>How does the reading proficiency of Filipino students compare to that of other Southeast Asian students in the PISA dataset?</li>
+								<li>To what degree do household income and parental education correlate with standardized reading comprehension scores in the Philippines?</li>
+								<li>Is there a statistically significant difference in literacy outcomes between students from urban and rural public elementary schools?</li>
+							</ul>
+						</div>
+						<div class="hypothesis-box">
+							<h3>Hypotheses</h3>
+							<ul>
+								<li>Filipino students will have lower reading proficiency compared to the latest Southeast Asian benchmarks from PISA.</li>
+								<li>Lower household income and parental education will be associated with lower reading comprehension scores.</li>
+								<li>Students from rural public schools will demonstrate significantly lower literacy outcomes than students from urban schools.</li>
+							</ul>
+						</div>
+					</div>
 				</div>
-			</article>
+			</section>
 
-		<!-- Hypotheses -->
-			<article id="hypotheses" class="wrapper style2">
+			<!-- Data -->
+			<section id="data" class="section-block">
 				<div class="container">
-					<header>
-						<h2>Hypotheses</h2>
-					</header>
-					<ul>
-						<li>Filipino students will have lower reading proficiency compared to the latest Southeast Asian benchmarks from PISA.</li>
-						<li>Lower household income and parental education will be associated with lower reading comprehension scores.</li>
-						<li>Students from rural public schools will demonstrate significantly lower literacy outcomes than students from urban schools.</li>
-					</ul>
+					<h2 class="section-title-center">Data</h2>
+					<p class="section-desc-center">Multiple educational datasets are analyzed. Literacy outcomes are compared across demographic and geographic variables, and statistical methods are used to identify relationships and disparities.</p>
+
+					<div class="data-cards">
+						<div class="data-card data-card-red">
+							<h3>PISA 2022</h3>
+							<p>International assessment of student reading performance and socioeconomic context.</p>
+						</div>
+						<div class="data-card data-card-green">
+							<h3>SEA-PLM</h3>
+							<p>Regional literacy assessment across Southeast Asian education systems.</p>
+						</div>
+						<div class="data-card data-card-blue">
+							<h3>FLEMMS</h3>
+							<p>National functional literacy and education statistics for the Philippines.</p>
+						</div>
+					</div>
+
+					<p class="cta-center">
+						<a href="https://drive.google.com/drive/folders/1YUsxrRSq7mFXAlM4QAR1T-unH6TEBggA?usp=sharing" class="btn-outline" target="_blank" rel="noopener noreferrer">View Dataset Repository</a>
+					</p>
 				</div>
-			</article>
+			</section>
 
-		<!-- Approach -->
-			<article id="approach" class="wrapper style3">
+			<!-- Results -->
+			<section id="results" class="section-block section-alt">
 				<div class="container">
-					<header>
-						<h2>Approach</h2>
-					</header>
-					<p>To investigate these questions, we analyze multiple datasets related to education and socioeconomic indicators. These include international large-scale assessments and national statistics datasets that provide information about literacy performance, household income, parental education, and geographic classification of schools.</p>
-					<p>Statistical analysis will be used to measure correlations between socioeconomic indicators and reading scores, while comparative analysis will evaluate differences between urban and rural student populations.</p>
-				</div>
-			</article>
+					<h2 class="section-title-center">Results</h2>
+					<p class="section-desc-center">Here is what has been found from the analyzed datasets.</p>
 
-		<!-- Data Sources -->
-			<article id="data" class="wrapper style2">
-				<div class="container">
-					<header>
-						<h2>Data Sources</h2>
-					</header>
-					<ul>
-						<li><a href="https://www.oecd.org/en/data/datasets/pisa-2022-database.html" target="_blank">PISA 2022 Database</a></li>
-						<li><a href="https://www.seaplm.org/index.php/sea-plm-2024/datasets-and-questionnaires-2024" target="_blank">SEA-PLM 2024 Dataset</a></li>
-						<li><a href="https://psa.gov.ph/statistics/education-mass-media/stat-tables/released/2024,%20FLEMMS,%20education" target="_blank">PSA FLEMMS 2024</a></li>
-					</ul>
-				</div>
-			</article>
+					<div class="nutshell-block">
+						<h3>Literacy in a Nutshell</h3>
+						<figure>
+							<button type="button" class="gallery-trigger" data-caption="PISA ESCS overlapped regression plot" data-src="images/pisa_escs_overlapped_regression_plot.svg">
+								<img src="images/pisa_escs_overlapped_regression_plot.svg" alt="Overlapped regression plot of PISA reading scores and socioeconomic status" />
+							</button>
+							<figcaption>Socioeconomic status and reading performance (PISA 2022).</figcaption>
+						</figure>
+					</div>
 
-		<!-- Analysis & Visualizations -->
-			<article id="analysis" class="wrapper style1">
-				<div class="container">
-					<header>
-						<h2>Exploratory Data Analysis</h2>
-					</header>
-					<p style="font-size: 1.1rem; margin-bottom: 3rem;">Our analysis examines literacy patterns across the Philippines through three complementary research questions. Below are the key visualizations from our exploratory data analysis.</p>
-					
-					<!-- RQ1 Visualizations -->
-					<div style="margin: 3rem 0; padding: 2rem 0 2.5rem 0; border-bottom: 2px solid #eee;">
-						<h3 style="color: #333; margin: 0 0 0.75rem 0;">RQ1: Regional Comparison</h3>
-						<p style="font-size: 0.95rem; color: #666; margin: 0 0 1rem 0; font-weight: 500;">How does the reading proficiency of Filipino students compare to other Southeast Asian students?</p>
-						<p style="font-size: 0.9rem; color: #777; line-height: 1.7; margin-bottom: 2.5rem;">We compared reading proficiency scores of Filipino students against other Southeast Asian nations using PISA 2022 data. The visualizations reveal overall trends in regional literacy performance and highlight areas where the Philippines differs from neighboring countries in student achievement levels.</p>
-						<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
-							<figure style="text-align: center; margin: 0;">
-								<img src="images/rq1_0.svg" alt="RQ1 Visualization 1" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 1.1</figcaption>
+					<div class="rq-block">
+						<h3>RQ1: Regional Comparison</h3>
+						<p class="rq-intro">How does the reading proficiency of Filipino students compare to that of other Southeast Asian students in the PISA dataset?</p>
+						<p>We compared reading proficiency scores of Filipino students against other Southeast Asian nations using PISA 2022 data. The visualizations reveal overall trends in regional literacy performance and highlight areas where the Philippines differs from neighboring countries in student achievement levels.</p>
+						<div class="gallery-grid">
+							<figure>
+								<button type="button" class="gallery-trigger" data-caption="RQ1 — Figure 1.1" data-src="images/rq1_0.svg"><img src="images/rq1_0.svg" alt="RQ1 visualization 1" loading="lazy" /></button>
+								<figcaption>Figure 1.1</figcaption>
 							</figure>
-							<figure style="text-align: center; margin: 0;">
-								<img src="images/rq1_1.svg" alt="RQ1 Visualization 2" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 1.2</figcaption>
+							<figure>
+								<button type="button" class="gallery-trigger" data-caption="RQ1 — Figure 1.2" data-src="images/rq1_1.svg"><img src="images/rq1_1.svg" alt="RQ1 visualization 2" loading="lazy" /></button>
+								<figcaption>Figure 1.2</figcaption>
 							</figure>
-							<figure style="text-align: center; margin: 0;">
-								<img src="images/rq1_2.svg" alt="RQ1 Visualization 3" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 1.3</figcaption>
+							<figure>
+								<button type="button" class="gallery-trigger" data-caption="RQ1 — Figure 1.3" data-src="images/rq1_2.svg"><img src="images/rq1_2.svg" alt="RQ1 visualization 3" loading="lazy" /></button>
+								<figcaption>Figure 1.3</figcaption>
 							</figure>
 						</div>
 					</div>
 
-					<!-- RQ2 Visualizations -->
-					<div style="margin: 3rem 0; padding: 2rem 0 2.5rem 0; border-bottom: 2px solid #eee;">
-						<h3 style="color: #333; margin: 0 0 0.75rem 0;">RQ2: Socioeconomic Factors</h3>
-						<p style="font-size: 0.95rem; color: #666; margin: 0 0 1rem 0; font-weight: 500;">To what degree do household income and parental education correlate with reading scores?</p>
-						<p style="font-size: 0.9rem; color: #777; line-height: 1.7; margin-bottom: 2.5rem;">Socioeconomic status—measured by household income and parental education—significantly influences student literacy outcomes. Our analysis explores the relationship between these factors and reading proficiency, revealing how economic disparities translate into educational achievement gaps. Multiple visualizations examine correlation patterns and distribution differences across income and education levels.</p>
-						<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
-							<figure style="text-align: center; margin: 0;">
-								<img src="images/rq2_0.svg" alt="RQ2 Visualization 1" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 2.1</figcaption>
+					<div class="rq-block">
+						<h3>RQ2: Socioeconomic Factors</h3>
+						<p class="rq-intro">To what degree do household income and parental education correlate with standardized reading comprehension scores in the Philippines?</p>
+						<p>Socioeconomic status—measured by household income and parental education—significantly influences student literacy outcomes. Our analysis explores the relationship between these factors and reading proficiency, revealing how economic disparities translate into educational achievement gaps.</p>
+						<div class="gallery-grid">
+							<figure>
+								<button type="button" class="gallery-trigger" data-caption="RQ2 — Figure 2.1" data-src="images/rq2_0.svg"><img src="images/rq2_0.svg" alt="RQ2 visualization 1" loading="lazy" /></button>
+								<figcaption>Figure 2.1</figcaption>
 							</figure>
-							<figure style="text-align: center; margin: 0;">
-								<img src="images/rq2_1.svg" alt="RQ2 Visualization 2" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 2.2</figcaption>
+							<figure>
+								<button type="button" class="gallery-trigger" data-caption="RQ2 — Figure 2.2" data-src="images/rq2_1.svg"><img src="images/rq2_1.svg" alt="RQ2 visualization 2" loading="lazy" /></button>
+								<figcaption>Figure 2.2</figcaption>
 							</figure>
-							<figure style="text-align: center; margin: 0;">
-								<img src="images/rq2_2.svg" alt="RQ2 Visualization 3" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 2.3</figcaption>
+							<figure>
+								<button type="button" class="gallery-trigger" data-caption="RQ2 — Figure 2.3" data-src="images/rq2_2.svg"><img src="images/rq2_2.svg" alt="RQ2 visualization 3" loading="lazy" /></button>
+								<figcaption>Figure 2.3</figcaption>
 							</figure>
-							<figure style="text-align: center; margin: 0;">
-								<img src="images/rq2_3.svg" alt="RQ2 Visualization 4" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 2.4</figcaption>
+							<figure>
+								<button type="button" class="gallery-trigger" data-caption="RQ2 — Figure 2.4" data-src="images/rq2_3.svg"><img src="images/rq2_3.svg" alt="RQ2 visualization 4" loading="lazy" /></button>
+								<figcaption>Figure 2.4</figcaption>
 							</figure>
-							<figure style="text-align: center; margin: 0;">
-								<img src="images/rq2_4.svg" alt="RQ2 Visualization 5" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 2.5</figcaption>
+							<figure>
+								<button type="button" class="gallery-trigger" data-caption="RQ2 — Figure 2.5" data-src="images/rq2_4.svg"><img src="images/rq2_4.svg" alt="RQ2 visualization 5" loading="lazy" /></button>
+								<figcaption>Figure 2.5</figcaption>
 							</figure>
 						</div>
 					</div>
 
-					<!-- RQ3 Visualizations -->
-					<div style="margin: 3rem 0 0 0; padding: 2rem 0 0 0;">
-						<h3 style="color: #333; margin: 0 0 0.75rem 0;">RQ3: Urban vs. Rural Differences</h3>
-						<p style="font-size: 0.95rem; color: #666; margin: 0 0 1rem 0; font-weight: 500;">Is there a statistically significant difference in literacy outcomes between urban and rural schools?</p>
-						<p style="font-size: 0.9rem; color: #777; line-height: 1.7; margin-bottom: 2.5rem;">Geographic location fundamentally shapes educational access and outcomes. This analysis compares reading proficiency between urban and rural public elementary schools in the Philippines. The visualizations demonstrate disparities in literacy performance and highlight the structural challenges facing rural education systems.</p>
-						<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
-							<figure style="text-align: center; margin: 0;">
-								<img src="images/rq3_0.png" alt="RQ3 Visualization 1" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 3.1</figcaption>
+					<div class="rq-block">
+						<h3>RQ3: Urban vs Rural Differences</h3>
+						<p class="rq-intro">Is there a statistically significant difference in literacy outcomes between students from urban and rural public elementary schools?</p>
+						<p>Geographic location fundamentally shapes educational access and outcomes. This analysis compares reading proficiency between urban and rural public elementary schools in the Philippines.</p>
+						<div class="gallery-grid">
+							<figure>
+								<button type="button" class="gallery-trigger" data-caption="RQ3 — Figure 3.1" data-src="images/rq3_0.png"><img src="images/rq3_0.png" alt="RQ3 visualization 1" loading="lazy" /></button>
+								<figcaption>Figure 3.1</figcaption>
 							</figure>
-							<figure style="text-align: center; margin: 0;">
-								<img src="images/rq3_1.svg" alt="RQ3 Visualization 2" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 3.2</figcaption>
+							<figure>
+								<button type="button" class="gallery-trigger" data-caption="RQ3 — Figure 3.2" data-src="images/rq3_1.svg"><img src="images/rq3_1.svg" alt="RQ3 visualization 2" loading="lazy" /></button>
+								<figcaption>Figure 3.2</figcaption>
 							</figure>
-							<figure style="text-align: center; margin: 0;">
-								<img src="images/rq3_2.svg" alt="RQ3 Visualization 3" style="width: 100%; height: auto; border: 1px solid #ddd; padding: 0.5rem;">
-								<figcaption style="font-size: 0.85rem; color: #666; margin-top: 0.75rem;">Figure 3.3</figcaption>
+							<figure>
+								<button type="button" class="gallery-trigger" data-caption="RQ3 — Figure 3.3" data-src="images/rq3_2.svg"><img src="images/rq3_2.svg" alt="RQ3 visualization 3" loading="lazy" /></button>
+								<figcaption>Figure 3.3</figcaption>
 							</figure>
 						</div>
 					</div>
 				</div>
-			</article>
+			</section>
 
-		<!-- Hypothesis Testing Results -->
-			<article id="findings" class="wrapper style2">
+			<!-- Conclusion -->
+			<section id="conclusion" class="section-block">
 				<div class="container">
-					<header>
-						<h2>Hypothesis Testing Results</h2>
-					</header>
-					<p style="font-size: 0.95rem; color: #666; margin: 0.5rem 0 2.5rem 0;">We conducted statistical tests to evaluate our primary hypotheses. The results provide evidence about literacy disparities in the Philippines:</p>
-					
-					<div style="background: #f9f9f9; border-left: 4px solid #0066cc; padding: 2rem; border-radius: 4px; margin-bottom: 3rem;">
-						<h4 style="color: #333; margin: 0 0 1rem 0;">Hypothesis 3: Urban-Rural Disparity</h4>
-						<p style="font-size: 0.9rem; color: #666; margin: 0 0 0.75rem 0;"><strong>Hypothesis:</strong> Students from rural public schools show significantly lower literacy outcomes.</p>
-						<div style="font-size: 0.9rem; color: #222; line-height: 1.7;">
-							<p><strong>Hypothesis Testing: Pearson Correlation Analysis</strong></p>
+					<h2 class="section-title-center">Conclusion</h2>
+					<ul class="result-cards">
+						<li>
+							<div class="result-card">
+								<h3>Results 1</h3>
+								<p>Filipino students consistently underperform regional benchmarks.</p>
+							</div>
+						</li>
+						<li>
+							<div class="result-card">
+								<h3>Results 2</h3>
+								<p>Socioeconomic status strongly predicts literacy outcomes.</p>
+							</div>
+						</li>
+						<li>
+							<div class="result-card">
+								<h3>Results 3</h3>
+								<p>Geographic location contributes significantly to educational inequality.</p>
+							</div>
+						</li>
+					</ul>
+					<div class="result-card result-card-wide">
+						<h3>Results 4</h3>
+						<p>Structural barriers compound literacy challenges in rural communities.</p>
+					</div>
+
+					<details class="stat-details">
+						<summary>Detailed statistical interpretation</summary>
+						<div class="stat-details-body">
+							<h4>Hypothesis 3: Urban–Rural Disparity</h4>
+							<p><strong>Hypothesis:</strong> Students from rural public schools show significantly lower literacy outcomes.</p>
 							<p>A Pearson correlation analysis was conducted to determine whether a statistically significant relationship exists between urbanity level and literacy rate across regions (Hypothesis 3). The results produced a correlation coefficient of r = 0.504, indicating a moderate positive relationship between the two variables. This suggests that regions with higher levels of urbanization tend to have higher literacy rates.</p>
-							<p>The p-value obtained from the test was p = 0.0328, which is less than the commonly accepted significance level of α = 0.05. Therefore, the null hypothesis stating that there is no significant relationship between urbanity level and literacy rate is rejected. This indicates that the observed relationship is statistically significant and unlikely to have occurred by random chance.</p>
-							<p>Further analysis using linear regression produced a slope of 0.0712 and an intercept of 85.7517. The positive slope indicates that for every one percentage point increase in urbanity level, the literacy rate is expected to increase by approximately 0.071 percentage points. This supports the earlier observation from the scatterplot that the relationship between the variables is positive.</p>
-							<p>The coefficient of determination, R² = 0.254, indicates that approximately 25.44% of the variation in literacy rate can be explained by differences in urbanity level. While this demonstrates that urbanity contributes to literacy outcomes, it also suggests that other factors, such as education access, socioeconomic conditions, infrastructure, and government programs, likely play a substantial role in influencing literacy rates.</p>
+							<p>The p-value obtained from the test was p = 0.0328, which is less than the commonly accepted significance level of α = 0.05. Therefore, the null hypothesis stating that there is no significant relationship between urbanity level and literacy rate is rejected.</p>
+							<p>Further analysis using linear regression produced a slope of 0.0712 and an intercept of 85.7517. The positive slope indicates that for every one percentage point increase in urbanity level, the literacy rate is expected to increase by approximately 0.071 percentage points.</p>
+							<p>The coefficient of determination, R² = 0.254, indicates that approximately 25.44% of the variation in literacy rate can be explained by differences in urbanity level. While this demonstrates that urbanity contributes to literacy outcomes, it also suggests that other factors—such as education access, socioeconomic conditions, infrastructure, and government programs—likely play a substantial role in influencing literacy rates.</p>
 							<p>Overall, the statistical analysis confirms that there is a statistically significant, moderate positive relationship between urbanity level and literacy rate among regions. However, the relatively modest R² value indicates that urbanity level alone does not fully explain variations in literacy, and additional variables would be needed for a more comprehensive model.</p>
 						</div>
-					</div>
-					
-					<div style="margin-top: 0; padding: 2rem; background: #f0f7ff; border-radius: 6px; border-left: 4px solid #0066cc;">
-						<h4 style="color: #333; margin: 0 0 1.25rem 0;">Key Takeaways</h4>
-						<ul style="color: #222; line-height: 1.8; margin: 0; padding-left: 1.5rem;">
-							<li style="margin-bottom: 0.75rem;">Filipino students consistently underperform compared to regional benchmarks</li>
-							<li style="margin-bottom: 0.75rem;">Socioeconomic status is a strong predictor of reading achievement</li>
-							<li style="margin-bottom: 0.75rem;">Geographic location creates significant educational inequities</li>
-							<li>Structural barriers in rural areas compound literacy challenges</li>
-						</ul>
+					</details>
+				</div>
+			</section>
+
+			<!-- ML Model -->
+			<section id="ml-model" class="section-block section-alt">
+				<div class="container section-narrow">
+					<h2 class="section-title-center">Machine Learning Model</h2>
+					<p class="section-desc-center">Predictive modeling and literacy forecasting components will be added in future iterations.</p>
+					<div class="ml-slot">
+						<span>Model visualizations and outputs will appear here</span>
 					</div>
 				</div>
-			</article>
+			</section>
 
-		<!-- Resources -->
-			<article id="resources" class="wrapper style3">
+			<!-- Team -->
+			<footer id="team" class="site-footer">
 				<div class="container">
-					<header>
-						<h2>Project Resources</h2>
-					</header>
-					<p><strong>Data Documentation:</strong> <a href="https://docs.google.com/document/d/1VfWRnrThractI-gw_n7bB9kSB-LbXmod8S-CClgdk-4/edit?usp=sharing" target="_blank">View Google Docs</a></p>
-					<p><strong>Dataset/s:</strong> <a href="https://drive.google.com/drive/folders/1YUsxrRSq7mFXAlM4QAR1T-unH6TEBggA?usp=sharing" target="_blank">View Google Sheets</a></p>
+					<h2>Team</h2>
+					<ul class="team-list">
+						<li class="team-member team-red">
+							<div class="member-info">
+								<h4>Ace Zeus Rimo</h4>
+								<p>Hi, I'm Ace. I am a 3rd-year Computer Science student at the University of the Philippines, Diliman. I entered this program with the aspiration of becoming a software engineer.</p>
+								<p>I usually solve problems through programming in my free time, but aside from that, I also enjoy running as a hobby.</p>
+								<ul class="member-contacts">
+									<li><a href="mailto:adrimo@up.edu.ph">adrimo@up.edu.ph</a></li>
+									<li><a href="https://www.instagram.com/eyszus/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="team-member team-green">
+							<div class="member-info">
+								<h4>Josh Rylie Patiño</h4>
+								<p>Hello, I'm Josh and I'm a 3rd year Computer Science student at the University of the Philippines - Diliman. In my free time, I like to go on Codeforces and Atcoder and solve problems there.</p>
+								<p>As cliché as it sounds, I believe that anyone can achieve anything, as long as they give it their all.</p>
+								<ul class="member-contacts">
+									<li><a href="mailto:jfpatino1@up.edu.ph">jfpatino1@up.edu.ph</a></li>
+									<li><a href="https://www.instagram.com/jshrylie/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="team-member team-blue">
+							<div class="member-info">
+								<h4>Renson Nicolai Villareal</h4>
+								<p>Hi! I'm Renz and I'm a 3rd year Computer Science student at the University of the Philippines, Diliman. My academic interests center on data analysis and building practical solutions using computational thinking.</p>
+								<p>In my free time, I try to balance technical growth with reflection and involvement in my church community, which helps ground my perspective and values as I continue developing both personally and professionally.</p>
+								<ul class="member-contacts">
+									<li><a href="mailto:rdvillareal2@up.edu.ph">rdvillareal2@up.edu.ph</a></li>
+									<li><a href="https://www.instagram.com/ren_zyyyy/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
 				</div>
-			</article>
+			</footer>
+		</main>
 
-		<!-- About Us -->
-			<article id="team" class="wrapper style4" style="text-shadow: none;">
-				<div class="container medium" style="text-shadow: none;">
-					<header>
-						<h2 style="text-shadow: none;">About Us</h2>
-					</header>
-					<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; text-align: left;">
-						<div style="background: rgba(255,255,255,0.95); padding: 1.75rem; border-radius: 12px; box-shadow: 0 12px 30px rgba(0,0,0,0.08);">
-							<h3 style="margin-top: 0; margin-bottom: 0.75rem; color: #111;">Ace Zeus Rimo</h3>
-							<p style="font-size: 0.95rem; color: #222; line-height: 1.7; margin-bottom: 0.75rem;">Hi, I'm Ace. I am a 3rd-year Computer Science student at the University of the Philippines, Diliman. I entered this program with the aspiration of becoming a software engineer.</p>
-							<p style="font-size: 0.95rem; color: #222; line-height: 1.7; margin: 0;">I usually solve problems through programming in my free time, but aside from that, I also enjoy running as a hobby.</p>
-						</div>
-						<div style="background: rgba(255,255,255,0.95); padding: 1.75rem; border-radius: 12px; box-shadow: 0 12px 30px rgba(0,0,0,0.08);">
-							<h3 style="margin-top: 0; margin-bottom: 0.75rem; color: #111;">Josh Rylie Patiño</h3>
-							<p style="font-size: 0.95rem; color: #222; line-height: 1.7; margin-bottom: 0.75rem;">Hello, I'm Josh and I'm a 3rd year Computer Science student at the University of the Philippines - Diliman. In my free time, I like to go on Codeforces and Atcoder and solve problems there.</p>
-							<p style="font-size: 0.95rem; color: #222; line-height: 1.7; margin: 0;">As cliché as it sounds, I believe that anyone can achieve anything, as long as they give it their all.</p>
-						</div>
-						<div style="background: rgba(255,255,255,0.95); padding: 1.75rem; border-radius: 12px; box-shadow: 0 12px 30px rgba(0,0,0,0.08);">
-							<h3 style="margin-top: 0; margin-bottom: 0.75rem; color: #111;">Renson Nicolai Villareal</h3>
-							<p style="font-size: 0.95rem; color: #222; line-height: 1.7; margin-bottom: 0.75rem;">Hi! I'm Renz and I'm a 3rd year Computer Science student at the University of the Philippines, Diliman. My academic interests center on data analysis and building practical solutions using computational thinking.</p>
-							<p style="font-size: 0.95rem; color: #222; line-height: 1.7; margin: 0;">In my free time, I try to balance technical growth with reflection and involvement in my church community, which helps ground my perspective and values as I continue developing both personally and professionally.</p>
-						</div>
-					</div>
-				</div>
-			</article>
+		<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged visualization" hidden>
+			<button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+			<div class="lightbox-inner">
+				<img src="" alt="" id="lightbox-img" />
+				<p class="lightbox-caption" id="lightbox-caption"></p>
+			</div>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 	</body>
 </html>
