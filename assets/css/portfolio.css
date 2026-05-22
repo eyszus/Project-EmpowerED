@@ -1,3 +1,27 @@
+body.portfolio .rq-gallery-scroll {
+	display: flex;
+	overflow-x: auto;
+	gap: 2rem;
+	padding: 2rem 0 1rem 0;
+	scroll-snap-type: x mandatory;
+}
+
+body.portfolio .rq-gallery-scroll .viz-item {
+	min-width: 340px;
+	flex: 0 0 auto;
+	scroll-snap-align: start;
+	background: var(--background-secondary, #fff);
+	border-radius: 1rem;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+	padding: 1.5rem 1rem 1rem 1rem;
+	margin: 0;
+	text-align: center;
+	transition: box-shadow 0.2s;
+}
+
+body.portfolio .rq-gallery-scroll .viz-item:hover {
+	box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
 /*
 	Project EmpowerED — Education & Opportunity palette
 */
