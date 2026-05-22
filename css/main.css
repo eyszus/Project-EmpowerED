@@ -2060,9 +2060,18 @@ input, select, textarea {
 		}
 
 		#nav .nav-logo img {
-			height: 2.2em;
-			width: auto;
 			display: block;
+
+			/* remove any borders/outlines */
+			border: none !important;
+			outline: none !important;
+			box-shadow: none !important;
+
+			/* responsive sizing */
+			height: clamp(32px, 4vw, 42px);
+			width: auto;
+			max-width: 180px;
+			object-fit: contain;
 		}
 
 		#nav ul {

@@ -121,9 +121,13 @@ body.portfolio .nav-logo {
 }
 
 body.portfolio .nav-logo img {
-	height: 3.5rem;
+	height: 60px !important;
 	width: auto;
-	display: block;
+	max-width: 200px;
+    object-fit: contain;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 body.portfolio .header-nav {
@@ -1230,7 +1234,13 @@ body.portfolio .lightbox-close {
 	}
 
 	body.portfolio .nav-logo img {
-		height: 3rem;
+		height: 36px !important;
+		width: auto;
+		max-width: 120px;
+		object-fit: contain;
+		border: none !important;
+		outline: none !important;
+		box-shadow: none !important;
 	}
 }
 
@@ -1258,7 +1268,13 @@ body.portfolio .lightbox-close {
 	}
 
 	body.portfolio .nav-logo img {
-		height: 2.85rem;
+		height: 36px !important;
+		width: auto;
+		max-width: 120px;
+		object-fit: contain;
+		border: none !important;
+		outline: none !important;
+		box-shadow: none !important;
 	}
 
 	body.portfolio .nav-toggle {
