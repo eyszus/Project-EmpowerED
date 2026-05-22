@@ -15,6 +15,10 @@
 
 	<style>
 
+		.ml-predictor-box{
+			margin-top:3rem;
+		}
+
 		.ml-input-group {
 			margin-bottom: 2rem;
 		}
@@ -92,8 +96,8 @@
 							<li><a href="#data">Data</a></li>
 							<li><a href="#methodology">Methodology</a></li>
 							<li><a href="#results">Results</a></li>
-							<li><a href="#conclusion">Conclusion</a></li>
 							<li><a href="#ml-model">ML Model</a></li>
+							<li><a href="#conclusion">Conclusion</a></li>
 							<li><a href="#team">Team</a></li>
 						</ul>
 					</nav>
@@ -588,6 +592,246 @@
 				</div>
 			</section>
 
+			<!-- ML Model -->
+			<section id="ml-model" class="section-block">
+				<div class="container">
+
+					<h2 class="section-title-center">
+						Machine Learning Model
+					</h2>
+
+					<p class="section-desc-center">
+						Predict reading proficiency using socioeconomic indicators
+						derived from PISA 2022 data.
+					</p>
+				
+
+				<details class="stat-details">
+					<summary>
+						How the ML Model Was Trained and Chosen
+					</summary>
+
+					<div class="stat-details-body">
+
+						<p>
+							The machine learning component of the study focused on developing a predictive model that estimates students’ reading performance based on selected socioeconomic status (SES) indicators.
+						</p>
+
+						<p>
+							Using the Programme for International Student Assessment (PISA) dataset CY08MSP_STU_QQQ.SAV, the data was first filtered to include only Southeast Asian (SEA) countries. Data cleaning procedures were conducted to remove incomplete records, resulting in a final cleaned dataset of 45,575 samples.
+						</p>
+
+						<p>
+							Three SES-related variables were used as predictors:
+						</p>
+
+						<ul>
+							<li><strong>HOMEPOS</strong> — Home possessions index</li>
+							<li><strong>HISEI</strong> — Highest parental occupational status</li>
+							<li><strong>PAREDINT</strong> — Parents’ educational attainment</li>
+						</ul>
+
+						<p>
+							The target variables were the PISA reading performance values from the PVREAD columns, representing students’ plausible reading literacy scores.
+						</p>
+
+						<p>
+							The dataset was divided into:
+						</p>
+
+						<ul>
+							<li>90% Training Data</li>
+							<li>10% Testing Data</li>
+						</ul>
+
+						<p>
+							Several machine learning models were evaluated:
+						</p>
+
+						<ul>
+							<li>Linear Regression</li>
+							<li>Ridge Regression</li>
+							<li>Random Forest</li>
+							<li>Gradient Boosting</li>
+						</ul>
+
+						<p>
+							The <strong>Gradient Boosting</strong> model achieved the best overall performance:
+						</p>
+
+						<ul>
+							<li>R² = 0.3973</li>
+							<li>RMSE = 78.25</li>
+							<li>MAE = 61.85</li>
+						</ul>
+
+						<p>
+							Feature importance analysis showed:
+						</p>
+
+						<ul>
+							<li>HOMEPOS = 0.787351</li>
+							<li>HISEI = 0.177652</li>
+							<li>PAREDINT = 0.034998</li>
+						</ul>
+
+						<p>
+							These findings suggest that access to educational resources and home learning materials plays a substantially larger role in predicting reading achievement than the other SES indicators included in the model.
+						</p>
+
+					</div>
+				</details>
+
+
+				<details class="stat-details">
+					<summary>
+						ML Model Implementation and Practical Applications
+					</summary>
+
+					<div class="stat-details-body">
+
+						<p>
+							As part of the implementation of the developed machine learning model, the researchers created an interactive web-based prediction system hosted on this website.
+						</p>
+
+						<p>
+							Users may input values for:
+						</p>
+
+						<ul>
+							<li>HOMEPOS (Home Possessions)</li>
+							<li>HISEI (Highest Occupational Status)</li>
+							<li>PAREDINT (Parental Education)</li>
+						</ul>
+
+						<p>
+							The trained Gradient Boosting model then estimates a predicted reading score based on relationships learned from the PISA dataset.
+						</p>
+
+						<p>
+							To improve interpretability, predicted reading scores are automatically categorized into proficiency levels.
+						</p>
+
+						<p>
+							The developed model has practical implications for improving education in the Philippines. By identifying how socioeconomic factors influence reading performance, the system may help educators, researchers, and policymakers better understand which students may be at greater academic risk due to socioeconomic disadvantages.
+						</p>
+
+						<p>
+							The strong influence of HOMEPOS highlights the importance of educational resources and supportive home environments in shaping literacy outcomes.
+						</p>
+
+						<p>
+							Schools and local education agencies may use the model as a supplementary decision-support tool when identifying communities that could benefit from additional academic support, literacy interventions, educational materials, or socioeconomic assistance programs.
+						</p>
+
+						<p>
+							Insights from the model may also assist policymakers in guiding resource allocation and developing evidence-based educational policies that address inequality in learning opportunities.
+						</p>
+
+					</div>
+				</details>
+				
+				<div class="container section-narrow">
+					<div class="ml-predictor-box">
+
+						<div class="ml-input-group">
+
+							<label
+								for="hisei"
+								title="Highest International Socio-Economic Index of Occupational Status. Represents parental occupational status."
+							>
+								HISEI (0–90) ⓘ
+							</label>
+
+							<small class="input-error" id="hisei-error"></small>
+
+							<input
+								type="number"
+								id="hisei"
+								min="0"
+								max="90"
+								step="any"
+								placeholder="Enter occupational status"
+							/>
+
+						</div>
+
+						<div class="ml-input-group">
+
+							<label
+								for="homepos"
+								title="Home Possessions Index. Measures access to educational resources and household assets."
+							>
+								HOMEPOS (-5 to 5) ⓘ
+							</label>
+
+							<small class="input-error" id="homepos-error"></small>
+
+							<input
+								type="number"
+								id="homepos"
+								min="-5"
+								max="5"
+								step="any"
+								placeholder="Enter home possessions index"
+							/>
+
+						</div>
+
+						<div class="ml-input-group">
+
+							<label
+								for="paredint"
+								title="Parents' Educational Attainment. Represents the highest educational level completed by parents."
+							>
+								PAREDINT (0–16) ⓘ
+							</label>
+
+							<small class="input-error" id="paredint-error"></small>
+
+							<input
+								type="number"
+								id="paredint"
+								min="0"
+								max="16"
+								step="any"
+								placeholder="Enter parental education"
+							/>
+
+						</div>
+
+						<button
+							id="predict-btn"
+							class="btn-cta"
+							onclick="predictScore()"
+							disabled
+						>
+							Predict Reading Score
+						</button>
+
+						<div class="ml-result-box">
+
+							<div id="prediction-loading" hidden>
+								<div class="ml-spinner"></div>
+								<p>Generating prediction...</p>
+							</div>
+
+							<h3 id="prediction-result">
+								Predicted Reading Score: —
+							</h3>
+
+							<p id="prediction-interpretation">
+								Interpretation: —
+							</p>
+
+						</div>
+
+					</div>
+				</div>
+
+				</div>
+			</section>
+
 			<!-- Conclusion -->
 			<section id="conclusion" class="section-block">
 				<div class="container">
@@ -678,248 +922,6 @@
 
 				</div>
 
-			</section>
-
-			<!-- ML Model -->
-			<section id="ml-model" class="section-block">
-			    <div class="container section-narrow">
-			
-			        <h2 class="section-title-center">
-			            Machine Learning Model
-			        </h2>
-			
-			        <p class="section-desc-center">
-			            Predict reading proficiency using socioeconomic indicators
-			            derived from PISA 2022 data.
-			        </p>
-			
-			        <div class="ml-predictor-box">
-			
-			            <div class="ml-input-group">
-			
-			                <label
-								for="hisei"
-								title="Highest International Socio-Economic Index of Occupational Status. Represents parental occupational status."
-							>
-								HISEI (0–90) ⓘ
-							</label>
-
-							<small class="input-error" id="hisei-error"></small>
-			
-			                <input
-			                    type="number"
-			                    id="hisei"
-			                    min="0"
-			                    max="90"
-			                    step="any"
-			                    placeholder="Enter occupational status"
-			                />
-			
-			            </div>
-			
-			            <div class="ml-input-group">
-			
-			                <label
-								for="homepos"
-								title="Home Possessions Index. Measures access to educational resources and household assets."
-							>
-								HOMEPOS (-5 to 5) ⓘ
-							</label>
-
-							<small class="input-error" id="homepos-error"></small>
-			
-			                <input
-			                    type="number"
-			                    id="homepos"
-			                    min="-5"
-			                    max="5"
-			                    step="any"
-			                    placeholder="Enter home possessions index"
-			                />
-			
-			            </div>
-			
-			            <div class="ml-input-group">
-			
-			                <label
-								for="paredint"
-								title="Parents' Educational Attainment. Represents the highest educational level completed by parents."
-							>
-								PAREDINT (0–16) ⓘ
-							</label>
-
-							<small class="input-error" id="paredint-error"></small>
-			
-			                <input
-			                    type="number"
-			                    id="paredint"
-			                    min="0"
-			                    max="16"
-			                    step="any"
-			                    placeholder="Enter parental education"
-			                />
-			
-			            </div>
-			
-			            <button
-							id="predict-btn"
-							class="btn-cta"
-							onclick="predictScore()"
-							disabled
-						>
-			                Predict Reading Score
-			            </button>
-			
-			            <div class="ml-result-box">
-
-							<div id="prediction-loading" hidden>
-								<div class="ml-spinner"></div>
-								<p>Generating prediction...</p>
-							</div>
-
-							<h3 id="prediction-result">
-								Predicted Reading Score: —
-							</h3>
-
-							<p id="prediction-interpretation">
-								Interpretation: —
-							</p>
-
-						</div>
-			
-			        </div>
-			
-			    </div>
-			</section>
-
-			<section class="section-block">
-				<div class="container">
-
-					<details class="stat-details">
-						<summary>
-							How the ML Model Was Trained and Chosen
-						</summary>
-
-						<div class="stat-details-body">
-
-							<p>
-								The machine learning component of the study focused on developing a predictive model that estimates students’ reading performance based on selected socioeconomic status (SES) indicators.
-							</p>
-
-							<p>
-								Using the Programme for International Student Assessment (PISA) dataset CY08MSP_STU_QQQ.SAV, the data was first filtered to include only Southeast Asian (SEA) countries. Data cleaning procedures were conducted to remove incomplete records, resulting in a final cleaned dataset of 45,575 samples.
-							</p>
-
-							<p>
-								Three SES-related variables were used as predictors:
-							</p>
-
-							<ul>
-								<li><strong>HOMEPOS</strong> — Home possessions index</li>
-								<li><strong>HISEI</strong> — Highest parental occupational status</li>
-								<li><strong>PAREDINT</strong> — Parents’ educational attainment</li>
-							</ul>
-
-							<p>
-								The target variables were the PISA reading performance values from the PVREAD columns, representing students’ plausible reading literacy scores.
-							</p>
-
-							<p>
-								The dataset was divided into:
-							</p>
-
-							<ul>
-								<li>90% Training Data</li>
-								<li>10% Testing Data</li>
-							</ul>
-
-							<p>
-								Several machine learning models were evaluated:
-							</p>
-
-							<ul>
-								<li>Linear Regression</li>
-								<li>Ridge Regression</li>
-								<li>Random Forest</li>
-								<li>Gradient Boosting</li>
-							</ul>
-
-							<p>
-								The <strong>Gradient Boosting</strong> model achieved the best overall performance:
-							</p>
-
-							<ul>
-								<li>R² = 0.3973</li>
-								<li>RMSE = 78.25</li>
-								<li>MAE = 61.85</li>
-							</ul>
-
-							<p>
-								Feature importance analysis showed:
-							</p>
-
-							<ul>
-								<li>HOMEPOS = 0.787351</li>
-								<li>HISEI = 0.177652</li>
-								<li>PAREDINT = 0.034998</li>
-							</ul>
-
-							<p>
-								These findings suggest that access to educational resources and home learning materials plays a substantially larger role in predicting reading achievement than the other SES indicators included in the model.
-							</p>
-
-						</div>
-					</details>
-
-					<details class="stat-details">
-						<summary>
-							ML Model Implementation and Practical Applications
-						</summary>
-
-						<div class="stat-details-body">
-
-							<p>
-								As part of the implementation of the developed machine learning model, the researchers created an interactive web-based prediction system hosted on this website.
-							</p>
-
-							<p>
-								Users may input values for:
-							</p>
-
-							<ul>
-								<li>HOMEPOS (Home Possessions)</li>
-								<li>HISEI (Highest Occupational Status)</li>
-								<li>PAREDINT (Parental Education)</li>
-							</ul>
-
-							<p>
-								The trained Gradient Boosting model then estimates a predicted reading score based on relationships learned from the PISA dataset.
-							</p>
-
-							<p>
-								To improve interpretability, predicted reading scores are automatically categorized into proficiency levels.
-							</p>
-
-							<p>
-								The developed model has practical implications for improving education in the Philippines. By identifying how socioeconomic factors influence reading performance, the system may help educators, researchers, and policymakers better understand which students may be at greater academic risk due to socioeconomic disadvantages.
-							</p>
-
-							<p>
-								The strong influence of HOMEPOS highlights the importance of educational resources and supportive home environments in shaping literacy outcomes.
-							</p>
-
-							<p>
-								Schools and local education agencies may use the model as a supplementary decision-support tool when identifying communities that could benefit from additional academic support, literacy interventions, educational materials, or socioeconomic assistance programs.
-							</p>
-
-							<p>
-								Insights from the model may also assist policymakers in guiding resource allocation and developing evidence-based educational policies that address inequality in learning opportunities.
-							</p>
-
-						</div>
-					</details>
-
-				</div>
 			</section>
 
 			<!-- Team -->
