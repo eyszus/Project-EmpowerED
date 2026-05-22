@@ -300,13 +300,92 @@
 
 			<!-- ML Model -->
 			<section id="ml-model" class="section-block">
-				<div class="container section-narrow">
-					<h2 class="section-title-center">Machine Learning Model</h2>
-					<p class="section-desc-center">Predictive modeling and literacy forecasting components will be added in future iterations.</p>
-					<div class="ml-slot">
-						<span>Model visualizations and outputs will appear here</span>
-					</div>
-				</div>
+			    <div class="container section-narrow">
+			
+			        <h2 class="section-title-center">
+			            Machine Learning Model
+			        </h2>
+			
+			        <p class="section-desc-center">
+			            Predict reading proficiency using socioeconomic indicators
+			            derived from PISA 2022 data.
+			        </p>
+			
+			        <div class="ml-predictor-box">
+			
+			            <div class="ml-input-group">
+			
+			                <label for="hisei">
+			                    HISEI (0–90)
+			                </label>
+			
+			                <input
+			                    type="number"
+			                    id="hisei"
+			                    min="0"
+			                    max="90"
+			                    step="any"
+			                    placeholder="Enter occupational status"
+			                />
+			
+			            </div>
+			
+			            <div class="ml-input-group">
+			
+			                <label for="homepos">
+			                    HOMEPOS (-5 to 5)
+			                </label>
+			
+			                <input
+			                    type="number"
+			                    id="homepos"
+			                    min="-5"
+			                    max="5"
+			                    step="any"
+			                    placeholder="Enter home possessions index"
+			                />
+			
+			            </div>
+			
+			            <div class="ml-input-group">
+			
+			                <label for="paredint">
+			                    PAREDINT (0–16)
+			                </label>
+			
+			                <input
+			                    type="number"
+			                    id="paredint"
+			                    min="0"
+			                    max="16"
+			                    step="any"
+			                    placeholder="Enter parental education"
+			                />
+			
+			            </div>
+			
+			            <button
+			                class="btn-cta"
+			                onclick="predictScore()"
+			            >
+			                Predict Reading Score
+			            </button>
+			
+			            <div class="ml-result-box">
+			
+			                <h3 id="prediction-result">
+			                    Predicted Reading Score: —
+			                </h3>
+			
+			                <p id="prediction-interpretation">
+			                    Interpretation: —
+			                </p>
+			
+			            </div>
+			
+			        </div>
+			
+			    </div>
 			</section>
 
 			<!-- Team -->
@@ -406,5 +485,76 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+		
+		async function predictScore() {
+		
+		    const hisei = parseFloat(
+		        document.getElementById('hisei').value
+		    );
+		    const homepos = parseFloat(
+		        document.getElementById('homepos').value
+		    );
+		    const paredint = parseFloat(
+		        document.getElementById('paredint').value
+		    );
+		
+		    if (
+		        isNaN(hisei) ||
+		        isNaN(homepos) ||
+		        isNaN(paredint)
+		    ) {
+		        alert('Please fill in all fields.');
+		        return;
+		    }
+		
+		    try {
+		        const response = await fetch(
+		            'https://pisa-reading-api.onrender.com/predict',
+		            {
+		                method: 'POST',
+		                headers: {
+		                    'Content-Type': 'application/json'
+		                },
+		                body: JSON.stringify({
+		                    HISEI: hisei,
+		                    HOMEPOS: homepos,
+		                    PAREDINT: paredint
+		                })
+		            }
+		        );
+		
+		        const data = await response.json();
+		        const score = data.predicted_reading_score;
+		        let interpretation = '';
+		
+		        if (score < 350) {
+		            interpretation = 'Low proficiency';
+		        } else if (score <= 500) {
+		            interpretation = 'Moderate proficiency';
+		        } else {
+		            interpretation = 'High proficiency';
+		        }
+		        document.getElementById(
+		            'prediction-result'
+		        ).innerText =
+		            `Predicted Reading Score: ${score}`;
+		
+		        document.getElementById(
+		            'prediction-interpretation'
+		        ).innerText =
+		            `Interpretation: ${interpretation}`;
+		
+		    } catch (error) {
+		
+		        console.error(error);
+		
+		        alert(
+		            'Error connecting to prediction API.'
+		        );
+		    }
+		}
+		
+		</script>
 	</body>
 </html>
