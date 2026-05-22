@@ -90,6 +90,7 @@
 							<li><a href="#top">Home</a></li>
 							<li><a href="#background">Background</a></li>
 							<li><a href="#data">Data</a></li>
+							<li><a href="#methodology">Methodology</a></li>
 							<li><a href="#results">Results</a></li>
 							<li><a href="#conclusion">Conclusion</a></li>
 							<li><a href="#ml-model">ML Model</a></li>
@@ -219,12 +220,186 @@
 				</div>
 			</section>
 
+			<!-- Methodology -->
+			<section id="methodology" class="section-block">
+				<div class="container">
+
+					<h2 class="section-title-center">
+						Methodology
+					</h2>
+
+					<p class="section-desc-center">
+						Project EmpowerED combines international educational assessments and
+						national socioeconomic surveys to examine literacy outcomes in the
+						Philippines and identify the factors associated with reading achievement.
+					</p>
+
+					<div class="data-cards">
+
+						<div class="data-card">
+							<h3>PISA 2022</h3>
+							<p>
+								Over 7,000 fifteen-year-old students from the Philippines
+								and Southeast Asia were analyzed to evaluate reading
+								proficiency and socioeconomic indicators.
+							</p>
+						</div>
+
+						<div class="data-card">
+							<h3>SEA-PLM 2024</h3>
+							<p>
+								More than 6,000 Grade 5 students were included to assess
+								foundational literacy skills and educational outcomes
+								across the region.
+							</p>
+						</div>
+
+						<div class="data-card">
+							<h3>PSA FLEMMS 2024</h3>
+							<p>
+								Approximately 35,000–40,000 households were analyzed to
+								provide socioeconomic and educational indicators at the
+								regional level.
+							</p>
+						</div>
+
+					</div>
+
+					<div class="result-card result-card-wide">
+
+						<h3>Research Process</h3>
+
+						<p>
+							All datasets were collected using multi-stage stratified random
+							sampling to ensure representation across regions, school types,
+							and urban–rural populations. Schools or barangays served as
+							primary sampling units, while individual students and
+							households served as secondary sampling units.
+						</p>
+
+						<p>
+							Data preprocessing involved importing proprietary statistical
+							files, removing unnecessary metadata, converting datasets into
+							CSV format, and isolating the Philippine and Southeast Asian
+							cohorts relevant to the study.
+						</p>
+
+						<p>
+							Because student assessments and household surveys target
+							different populations, direct row-level matching was not
+							possible. Instead, regional proxy variables were created by
+							aggregating student literacy scores and linking them to
+							regional socioeconomic indicators such as household income and
+							parental education.
+						</p>
+
+						<p>
+							The resulting regional datasets were analyzed using
+							descriptive statistics, correlation analysis, and predictive
+							modeling to identify literacy disparities and the
+							socioeconomic factors most strongly associated with reading
+							performance.
+						</p>
+
+					</div>
+
+					<details class="stat-details">
+
+						<summary>
+							Detailed Methodology
+						</summary>
+
+						<div class="stat-details-body">
+
+							<h4>Data Sources</h4>
+
+							<p>
+								Project EmpowerED utilizes a multi-source framework that
+								combines international student assessments with national
+								socioeconomic survey data to analyze literacy outcomes in
+								the Philippines from 2022–2025.
+							</p>
+
+							<ul>
+								<li>PISA 2022 (~7,000+ students)</li>
+								<li>SEA-PLM 2024 (~6,000+ students)</li>
+								<li>PSA FLEMMS 2024 (~35,000–40,000 households)</li>
+							</ul>
+
+							<h4>Sampling Methodology</h4>
+
+							<p>
+								All baseline datasets employed multi-stage stratified random
+								sampling to ensure statistical representation across
+								regions, school classifications, and urban-rural divisions.
+							</p>
+
+							<p>
+								Schools or barangays functioned as primary sampling units,
+								while individual students and households served as
+								secondary sampling units.
+							</p>
+
+							<h4>Data Preparation</h4>
+
+							<p>
+								Data cleaning involved processing proprietary statistical
+								formats such as .sav files, removing metadata noise, and
+								converting datasets into flat CSV structures suitable for
+								analysis and deployment through Google Sheets.
+							</p>
+
+							<p>
+								Additional filtering procedures isolated the Philippine
+								cohort and relevant Southeast Asian populations from the
+								larger international datasets.
+							</p>
+
+							<h4>Data Integration</h4>
+
+							<p>
+								Because direct row-level linkage was impossible across
+								datasets with different target populations, regional proxy
+								variables were constructed.
+							</p>
+
+							<p>
+								Student performance scores from PISA and SEA-PLM were
+								aggregated into regional averages and mapped to
+								corresponding socioeconomic indicators extracted from
+								FLEMMS, including household income and parental education
+								levels.
+							</p>
+
+							<h4>Statistical Analysis</h4>
+
+							<p>
+								The integrated regional datasets were analyzed through
+								descriptive statistical profiling, correlation analysis,
+								and predictive modeling.
+							</p>
+
+							<p>
+								This approach enabled the project to evaluate literacy
+								disparities, quantify relationships between socioeconomic
+								factors and academic performance, and establish a
+								data-driven foundation for localized educational
+								interventions.
+							</p>
+
+						</div>
+
+					</details>
+
+				</div>
+			</section>
 			<!-- Results -->
 			<section id="results" class="section-block section-results">
 				<div class="container">
-					<h2 class="section-title-center">Results</h2>
-					<p class="section-desc-center">Here is what has been found from the analyzed datasets.</p>
-
+					<h2 class="section-title-center">Results & Analyses</h2>
+					<p class="section-desc-center">
+					Key insights from the statistical analyses, regional comparisons, and literacy outcome investigations conducted throughout the study.
+					</p>
 					<div class="nutshell-block nutshell-block--featured">
 						<p class="nutshell-eyebrow">Featured visualization</p>
 						<h3>Literacy in a Nutshell</h3>
@@ -316,51 +491,193 @@
 							</figure>
 						</div>
 					</article>
+
+					<hr class="section-divider" />
+
+						<h3 class="section-title-center">
+							Research Findings
+						</h3>
+
+						<ul class="result-cards">
+							<li>
+								<div class="result-card">
+									<h3>Regional Literacy Gap</h3>
+									<p>
+										The Philippines ranks lowest among the analyzed Southeast Asian nations, recording an average reading score below 350 and falling behind neighboring countries across all major literacy benchmarks.
+									</p>
+								</div>
+							</li>
+
+							<li>
+								<div class="result-card">
+									<h3>Socioeconomic Influence</h3>
+									<p>
+										Socioeconomic status demonstrates a stronger relationship with reading achievement than parental education alone, emphasizing the importance of resources and learning environments.
+									</p>
+								</div>
+							</li>
+
+							<li>
+								<div class="result-card">
+									<h3>Urban–Rural Disparity</h3>
+									<p>
+										Regions with higher urbanization consistently achieve stronger literacy outcomes, while low-urbanity areas exhibit significantly greater performance variability.
+									</p>
+								</div>
+							</li>
+						</ul>
+
+						<div class="result-card result-card-wide">
+							<h3>Educational Inequality</h3>
+							<p>
+								Structural barriers, unequal access to educational resources, and geographic disparities continue to contribute substantially to literacy challenges across the Philippines.
+							</p>
+						</div>
+
+						<details class="stat-details">
+							<summary>Detailed Statistical Interpretation</summary>
+
+							<div class="stat-details-body">
+
+								<h4>Result 1 — Regional Reading Performance</h4>
+
+								<p>
+									An analysis of reading literacy across selected Southeast Asian nations reveals a clear performance hierarchy, with the Philippines ranking at the bottom of the assessed cohort.
+								</p>
+
+								<p>
+									Singapore leads the region with mean reading scores exceeding 500, while Vietnam occupies a strong secondary position near 460. The Philippines records the lowest average reading score at below 350.
+								</p>
+
+								<h4>Result 2 — Socioeconomic Predictors</h4>
+
+								<p>
+									The correlation matrix demonstrates a strong relationship between parental education and socioeconomic status (r = 0.81).
+								</p>
+
+								<p>
+									Socioeconomic status exhibits a stronger correlation with reading performance (r = 0.56) than parental educational attainment alone (r = 0.45), indicating that access to resources and supportive learning environments play a larger role in literacy outcomes.
+								</p>
+
+								<h4>Result 3 — Urbanization and Literacy</h4>
+
+								<p>
+									Highly urbanized regions maintain literacy rates ranging from 86% to 93%, whereas less urbanized areas display substantially greater variability and lower outcomes.
+								</p>
+
+								<p>
+									For the Philippines, this highlights the educational consequences of geographic inequality and limited access to learning opportunities in rural communities.
+								</p>
+
+								<h4>Statistical Interpretation</h4>
+
+								<p>
+									A Pearson correlation analysis produced r = 0.504, indicating a moderate positive relationship between urbanization and literacy rates.
+								</p>
+
+								<p>
+									The resulting p-value (0.0328) is below α = 0.05, providing evidence of statistical significance and supporting the hypothesis that urbanity contributes meaningfully to literacy outcomes.
+								</p>
+
+								<p>
+									Regression analysis produced a slope of 0.0712 and an R² value of 0.254, indicating that approximately 25.44% of literacy variation may be explained by differences in urbanization levels.
+								</p>
+
+							</div>
+						</details>
 				</div>
 			</section>
 
 			<!-- Conclusion -->
 			<section id="conclusion" class="section-block">
 				<div class="container">
-					<h2 class="section-title-center">Conclusion</h2>
-					<ul class="result-cards">
-						<li>
-							<div class="result-card">
-								<h3>Results 1</h3>
-								<p>Filipino students consistently underperform regional benchmarks.</p>
-							</div>
-						</li>
-						<li>
-							<div class="result-card">
-								<h3>Results 2</h3>
-								<p>Socioeconomic status strongly predicts literacy outcomes.</p>
-							</div>
-						</li>
-						<li>
-							<div class="result-card">
-								<h3>Results 3</h3>
-								<p>Geographic location contributes significantly to educational inequality.</p>
-							</div>
-						</li>
-					</ul>
+
+					<h2 class="section-title-center">
+						Conclusion
+					</h2>
+
+					<p class="section-desc-center">
+						Key takeaways, implications, and future directions emerging from Project EmpowerED.
+					</p>
+
 					<div class="result-card result-card-wide">
-						<h3>Results 4</h3>
-						<p>Structural barriers compound literacy challenges in rural communities.</p>
+
+						<h3>Conclusion</h3>
+
+						<p>
+							The analyses and predictive modeling conducted in Project EmpowerED reveal that socioeconomic inequality and geographic disparities are among the primary drivers of the reading literacy crisis in Southeast Asia, particularly in the Philippines.
+						</p>
+
+						<p>
+							The Philippines ranks at the bottom of the assessed regional cohort, recording mean reading scores below 350 and trailing neighboring countries by a substantial margin.
+						</p>
+
+						<p>
+							Urbanization acts as a structural stabilizer for literacy outcomes, while low-urbanity regions experience considerably greater variability and educational disadvantage.
+						</p>
+
+						<p>
+							Machine learning analysis further demonstrates that access to educational resources, technology, and supportive home environments serves as a stronger predictor of literacy achievement than parental educational attainment alone.
+						</p>
+
 					</div>
 
 					<details class="stat-details">
-						<summary>Detailed statistical interpretation</summary>
+
+						<summary>
+							Implications
+						</summary>
+
 						<div class="stat-details-body">
-							<h4>Hypothesis 3: Urban–Rural Disparity</h4>
-							<p><strong>Hypothesis:</strong> Students from rural public schools show significantly lower literacy outcomes.</p>
-							<p>A Pearson correlation analysis was conducted to determine whether a statistically significant relationship exists between urbanity level and literacy rate across regions (Hypothesis 3). The results produced a correlation coefficient of r = 0.504, indicating a moderate positive relationship between the two variables. This suggests that regions with higher levels of urbanization tend to have higher literacy rates.</p>
-							<p>The p-value obtained from the test was p = 0.0328, which is less than the commonly accepted significance level of α = 0.05. Therefore, the null hypothesis stating that there is no significant relationship between urbanity level and literacy rate is rejected.</p>
-							<p>Further analysis using linear regression produced a slope of 0.0712 and an intercept of 85.7517. The positive slope indicates that for every one percentage point increase in urbanity level, the literacy rate is expected to increase by approximately 0.071 percentage points.</p>
-							<p>The coefficient of determination, R² = 0.254, indicates that approximately 25.44% of the variation in literacy rate can be explained by differences in urbanity level. While this demonstrates that urbanity contributes to literacy outcomes, it also suggests that other factors—such as education access, socioeconomic conditions, infrastructure, and government programs—likely play a substantial role in influencing literacy rates.</p>
-							<p>Overall, the statistical analysis confirms that there is a statistically significant, moderate positive relationship between urbanity level and literacy rate among regions. However, the relatively modest R² value indicates that urbanity level alone does not fully explain variations in literacy, and additional variables would be needed for a more comprehensive model.</p>
+
+							<p>
+								The findings provide a data-driven understanding of how economic privilege influences educational success in the Philippines.
+							</p>
+
+							<p>
+								Contrary to the assumption that academic achievement depends solely on individual ability or teaching quality, the results indicate that material conditions such as access to books, internet connectivity, and supportive learning environments are among the strongest predictors of literacy outcomes.
+							</p>
+
+							<p>
+								The Philippines’ placement near the bottom of Southeast Asian literacy rankings further suggests that educational reform and socioeconomic intervention must be treated as interconnected priorities.
+							</p>
+
 						</div>
+
 					</details>
+
+					<details class="stat-details">
+
+						<summary>
+							Future Recommendations
+						</summary>
+
+						<div class="stat-details-body">
+
+							<h4>Expanding the Predictive Scope of the Model</h4>
+
+							<p>
+								Future studies should incorporate localized variables such as regional school funding, student-to-teacher ratios, internet accessibility, and digital literacy indicators to improve predictive performance.
+							</p>
+
+							<h4>Targeted Resource Deployment Through the Platform</h4>
+
+							<p>
+								Local education agencies and schools may use the prediction platform as a supplementary diagnostic tool for identifying student groups that could benefit from literacy interventions and additional educational support.
+							</p>
+
+							<h4>Refining Proficiency-Level Categorization</h4>
+
+							<p>
+								Future versions of the platform may connect predicted proficiency levels with customized reading resources and intervention materials tailored to specific learner needs.
+							</p>
+
+						</div>
+
+					</details>
+
 				</div>
+
 			</section>
 
 			<!-- ML Model -->
