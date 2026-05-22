@@ -12,6 +12,71 @@
 		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
 		<link rel="stylesheet" href="assets/css/portfolio.css" />
 	</head>
+
+	<style>
+
+		.ml-input-group {
+			margin-bottom: 2rem;
+		}
+
+		.ml-result-box {
+			margin-top:2rem;
+		}
+
+		.input-error {
+			display:block;
+			margin-top:0.5rem;
+			min-height:1.2rem;
+			font-size:0.85rem;
+			color:#ef4444;
+		}
+
+		.input-invalid{
+			border-color:#ef4444 !important;
+		}
+
+		.input-valid{
+			border-color:#22c55e !important;
+		}
+
+		.interpretation-low{
+			color:#ef4444;
+			font-weight:700;
+		}
+
+		.interpretation-medium{
+			color:#facc15;
+			font-weight:700;
+		}
+
+		.interpretation-high{
+			color:#22c55e;
+			font-weight:700;
+		}
+
+		.ml-spinner{
+			width:32px;
+			height:32px;
+			margin:0 auto 10px;
+			border:4px solid rgba(255,255,255,.15);
+			border-top-color:#4f9cff;
+			border-radius:50%;
+			animation:spin .8s linear infinite;
+		}
+
+		@keyframes spin{
+			to{
+				transform:rotate(360deg);
+			}
+		}
+
+		#prediction-loading{
+			text-align:center;
+			margin-bottom:1rem;
+		}
+
+		</style>
+
 	<body class="is-preload portfolio">
 
 		<header id="nav" class="site-header" aria-label="Main navigation">
@@ -315,9 +380,14 @@
 			
 			            <div class="ml-input-group">
 			
-			                <label for="hisei">
-			                    HISEI (0–90)
-			                </label>
+			                <label
+								for="hisei"
+								title="Highest International Socio-Economic Index of Occupational Status. Represents parental occupational status."
+							>
+								HISEI (0–90) ⓘ
+							</label>
+
+							<small class="input-error" id="hisei-error"></small>
 			
 			                <input
 			                    type="number"
@@ -332,9 +402,14 @@
 			
 			            <div class="ml-input-group">
 			
-			                <label for="homepos">
-			                    HOMEPOS (-5 to 5)
-			                </label>
+			                <label
+								for="homepos"
+								title="Home Possessions Index. Measures access to educational resources and household assets."
+							>
+								HOMEPOS (-5 to 5) ⓘ
+							</label>
+
+							<small class="input-error" id="homepos-error"></small>
 			
 			                <input
 			                    type="number"
@@ -349,9 +424,14 @@
 			
 			            <div class="ml-input-group">
 			
-			                <label for="paredint">
-			                    PAREDINT (0–16)
-			                </label>
+			                <label
+								for="paredint"
+								title="Parents' Educational Attainment. Represents the highest educational level completed by parents."
+							>
+								PAREDINT (0–16) ⓘ
+							</label>
+
+							<small class="input-error" id="paredint-error"></small>
 			
 			                <input
 			                    type="number"
@@ -365,27 +445,164 @@
 			            </div>
 			
 			            <button
-			                class="btn-cta"
-			                onclick="predictScore()"
-			            >
+							id="predict-btn"
+							class="btn-cta"
+							onclick="predictScore()"
+							disabled
+						>
 			                Predict Reading Score
 			            </button>
 			
 			            <div class="ml-result-box">
-			
-			                <h3 id="prediction-result">
-			                    Predicted Reading Score: —
-			                </h3>
-			
-			                <p id="prediction-interpretation">
-			                    Interpretation: —
-			                </p>
-			
-			            </div>
+
+							<div id="prediction-loading" hidden>
+								<div class="ml-spinner"></div>
+								<p>Generating prediction...</p>
+							</div>
+
+							<h3 id="prediction-result">
+								Predicted Reading Score: —
+							</h3>
+
+							<p id="prediction-interpretation">
+								Interpretation: —
+							</p>
+
+						</div>
 			
 			        </div>
 			
 			    </div>
+			</section>
+
+			<section class="section-block">
+				<div class="container">
+
+					<details class="stat-details">
+						<summary>
+							How the ML Model Was Trained and Chosen
+						</summary>
+
+						<div class="stat-details-body">
+
+							<p>
+								The machine learning component of the study focused on developing a predictive model that estimates students’ reading performance based on selected socioeconomic status (SES) indicators.
+							</p>
+
+							<p>
+								Using the Programme for International Student Assessment (PISA) dataset CY08MSP_STU_QQQ.SAV, the data was first filtered to include only Southeast Asian (SEA) countries. Data cleaning procedures were conducted to remove incomplete records, resulting in a final cleaned dataset of 45,575 samples.
+							</p>
+
+							<p>
+								Three SES-related variables were used as predictors:
+							</p>
+
+							<ul>
+								<li><strong>HOMEPOS</strong> — Home possessions index</li>
+								<li><strong>HISEI</strong> — Highest parental occupational status</li>
+								<li><strong>PAREDINT</strong> — Parents’ educational attainment</li>
+							</ul>
+
+							<p>
+								The target variables were the PISA reading performance values from the PVREAD columns, representing students’ plausible reading literacy scores.
+							</p>
+
+							<p>
+								The dataset was divided into:
+							</p>
+
+							<ul>
+								<li>90% Training Data</li>
+								<li>10% Testing Data</li>
+							</ul>
+
+							<p>
+								Several machine learning models were evaluated:
+							</p>
+
+							<ul>
+								<li>Linear Regression</li>
+								<li>Ridge Regression</li>
+								<li>Random Forest</li>
+								<li>Gradient Boosting</li>
+							</ul>
+
+							<p>
+								The <strong>Gradient Boosting</strong> model achieved the best overall performance:
+							</p>
+
+							<ul>
+								<li>R² = 0.3973</li>
+								<li>RMSE = 78.25</li>
+								<li>MAE = 61.85</li>
+							</ul>
+
+							<p>
+								Feature importance analysis showed:
+							</p>
+
+							<ul>
+								<li>HOMEPOS = 0.787351</li>
+								<li>HISEI = 0.177652</li>
+								<li>PAREDINT = 0.034998</li>
+							</ul>
+
+							<p>
+								These findings suggest that access to educational resources and home learning materials plays a substantially larger role in predicting reading achievement than the other SES indicators included in the model.
+							</p>
+
+						</div>
+					</details>
+
+					<details class="stat-details">
+						<summary>
+							ML Model Implementation and Practical Applications
+						</summary>
+
+						<div class="stat-details-body">
+
+							<p>
+								As part of the implementation of the developed machine learning model, the researchers created an interactive web-based prediction system hosted on this website.
+							</p>
+
+							<p>
+								Users may input values for:
+							</p>
+
+							<ul>
+								<li>HOMEPOS (Home Possessions)</li>
+								<li>HISEI (Highest Occupational Status)</li>
+								<li>PAREDINT (Parental Education)</li>
+							</ul>
+
+							<p>
+								The trained Gradient Boosting model then estimates a predicted reading score based on relationships learned from the PISA dataset.
+							</p>
+
+							<p>
+								To improve interpretability, predicted reading scores are automatically categorized into proficiency levels.
+							</p>
+
+							<p>
+								The developed model has practical implications for improving education in the Philippines. By identifying how socioeconomic factors influence reading performance, the system may help educators, researchers, and policymakers better understand which students may be at greater academic risk due to socioeconomic disadvantages.
+							</p>
+
+							<p>
+								The strong influence of HOMEPOS highlights the importance of educational resources and supportive home environments in shaping literacy outcomes.
+							</p>
+
+							<p>
+								Schools and local education agencies may use the model as a supplementary decision-support tool when identifying communities that could benefit from additional academic support, literacy interventions, educational materials, or socioeconomic assistance programs.
+							</p>
+
+							<p>
+								Insights from the model may also assist policymakers in guiding resource allocation and developing evidence-based educational policies that address inequality in learning opportunities.
+							</p>
+
+						</div>
+					</details>
+
+				</div>
 			</section>
 
 			<!-- Team -->
@@ -486,75 +703,227 @@
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 		<script>
-		
-		async function predictScore() {
-		
-		    const hisei = parseFloat(
-		        document.getElementById('hisei').value
-		    );
-		    const homepos = parseFloat(
-		        document.getElementById('homepos').value
-		    );
-		    const paredint = parseFloat(
-		        document.getElementById('paredint').value
-		    );
-		
-		    if (
-		        isNaN(hisei) ||
-		        isNaN(homepos) ||
-		        isNaN(paredint)
-		    ) {
-		        alert('Please fill in all fields.');
-		        return;
-		    }
-		
-		    try {
-		        const response = await fetch(
-		            'https://pisa-reading-api.onrender.com/predict',
-		            {
-		                method: 'POST',
-		                headers: {
-		                    'Content-Type': 'application/json'
-		                },
-		                body: JSON.stringify({
-		                    HISEI: hisei,
-		                    HOMEPOS: homepos,
-		                    PAREDINT: paredint
-		                })
-		            }
-		        );
-		
-		        const data = await response.json();
-		        const score = data.predicted_reading_score;
-		        let interpretation = '';
-		
-		        if (score < 350) {
-		            interpretation = 'Low proficiency';
-		        } else if (score <= 500) {
-		            interpretation = 'Moderate proficiency';
-		        } else {
-		            interpretation = 'High proficiency';
-		        }
-		        document.getElementById(
-		            'prediction-result'
-		        ).innerText =
-		            `Predicted Reading Score: ${score}`;
-		
-		        document.getElementById(
-		            'prediction-interpretation'
-		        ).innerText =
-		            `Interpretation: ${interpretation}`;
-		
-		    } catch (error) {
-		
-		        console.error(error);
-		
-		        alert(
-		            'Error connecting to prediction API.'
-		        );
-		    }
-		}
-		
+					const ranges = {
+				hisei: [0, 90],
+				homepos: [-5, 5],
+				paredint: [0, 16]
+			};
+
+			function validateInput(id) {
+
+				const input =
+					document.getElementById(id);
+
+				const error =
+					document.getElementById(
+						`${id}-error`
+					);
+
+				const raw =
+					input.value.trim();
+
+				const [min, max] =
+					ranges[id];
+
+				if (raw === '') {
+
+					input.classList.remove(
+						'input-valid'
+					);
+
+					input.classList.add(
+						'input-invalid'
+					);
+
+					error.textContent =
+						`Required (${min} to ${max})`;
+
+					return false;
+				}
+
+				const value =
+					Number(raw);
+
+				if (
+					Number.isNaN(value) ||
+					value < min ||
+					value > max
+				) {
+
+					input.classList.remove(
+						'input-valid'
+					);
+
+					input.classList.add(
+						'input-invalid'
+					);
+
+					error.textContent =
+						`Must be between ${min} and ${max}`;
+
+					return false;
+				}
+
+				input.classList.remove(
+					'input-invalid'
+				);
+
+				input.classList.add(
+					'input-valid'
+				);
+
+				error.textContent = '';
+
+				return true;
+			}
+
+			function updateButtonState() {
+
+				const hiseiValid =
+					validateInput('hisei');
+
+				const homeposValid =
+					validateInput('homepos');
+
+				const paredintValid =
+					validateInput('paredint');
+
+				const valid =
+					hiseiValid &&
+					homeposValid &&
+					paredintValid;
+
+				document.getElementById(
+					'predict-btn'
+				).disabled = !valid;
+			}
+
+			['hisei', 'homepos', 'paredint']
+			.forEach(id => {
+
+				document
+					.getElementById(id)
+					.addEventListener(
+						'input',
+						updateButtonState
+					);
+			});
+
+			async function predictScore() {
+
+				const button =
+					document.getElementById(
+						'predict-btn'
+					);
+
+				const loading =
+					document.getElementById(
+						'prediction-loading'
+					);
+
+				loading.hidden = false;
+				button.disabled = true;
+
+				const hisei =
+					parseFloat(
+						document.getElementById('hisei').value
+					);
+
+				const homepos =
+					parseFloat(
+						document.getElementById('homepos').value
+					);
+
+				const paredint =
+					parseFloat(
+						document.getElementById('paredint').value
+					);
+
+				try {
+
+					const response =
+						await fetch(
+							'https://pisa-reading-api.onrender.com/predict',
+							{
+								method: 'POST',
+								headers: {
+									'Content-Type': 'application/json'
+								},
+								body: JSON.stringify({
+									HISEI: hisei,
+									HOMEPOS: homepos,
+									PAREDINT: paredint
+								})
+							}
+						);
+
+					const data =
+						await response.json();
+
+					const score =
+						data.predicted_reading_score;
+
+					let interpretation;
+					let className;
+
+					if (score < 350) {
+
+						interpretation =
+							'Low proficiency';
+
+						className =
+							'interpretation-low';
+
+					} else if (score <= 500) {
+
+						interpretation =
+							'Moderate proficiency';
+
+						className =
+							'interpretation-medium';
+
+					} else {
+
+						interpretation =
+							'High proficiency';
+
+						className =
+							'interpretation-high';
+					}
+
+					document.getElementById(
+						'prediction-result'
+					).innerText =
+						`Predicted Reading Score: ${score.toFixed(2)}`;
+
+					const interpretationElement =
+						document.getElementById(
+							'prediction-interpretation'
+						);
+
+					interpretationElement.innerText =
+						`Interpretation: ${interpretation}`;
+
+					interpretationElement.className =
+						className;
+
+				} catch (error) {
+
+					console.error(error);
+
+					alert(
+						'Error connecting to prediction API.'
+					);
+
+				} finally {
+
+					loading.hidden = true;
+
+					updateButtonState();
+				}
+			}
+
+			updateButtonState();
 		</script>
 	</body>
 </html>
